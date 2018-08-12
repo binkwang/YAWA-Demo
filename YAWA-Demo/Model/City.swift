@@ -36,8 +36,3 @@ struct City {
  }
  **/
 
-//var data: Data = JSON.data(using: .utf8)!
-//let anyObj = try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//let person = Person(with: anyObj!) // Maps here
-//label.text = person.name
-
