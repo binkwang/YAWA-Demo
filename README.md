@@ -7,6 +7,8 @@
 > OpenWeatherMap API: https://openweathermap.org/api
 >
 > API Key Error: https://openweathermap.org/faq#error401
+>
+> Weather icons: https://openweathermap.org/weather-conditions
 
 ### Development Environment
 > Xcode Version 9.4

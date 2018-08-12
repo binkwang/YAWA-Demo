@@ -60,7 +60,6 @@ class WeatherDetailViewController: UIViewController, UITableViewDataSource, UITa
             fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
         }
         
-//        var text: String?
         switch indexPath.row {
         case 0:
             if let city = city {
@@ -94,7 +93,6 @@ class WeatherDetailViewController: UIViewController, UITableViewDataSource, UITa
         default:
             cell.labelText = ""
         }
-//        cell.labelText = text
         
         return cell
     }
