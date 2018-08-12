@@ -12,10 +12,10 @@
 > Xcode Version 9.4
 >
 > Apple Swift version 4.1.2
+>
+> Apple iOS version  11.4
 
 ### TODO
-> Covert weather icon code to image
->
 > Architecture improvement
 
 ### Pages
