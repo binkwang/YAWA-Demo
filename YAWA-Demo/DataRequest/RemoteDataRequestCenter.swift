@@ -9,7 +9,8 @@
 import Foundation
 
 class RemoteDataRequestCenter {
-    private let weatherServer: String = "http://api.openweathermap.org/data/2.5/forecast/daily?"
+    static private let weatherServer: String = "http://api.openweathermap.org/data/2.5/forecast/daily?"
+    static private let weatherIconServer: String = "http://openweathermap.org/img/w/"
     
     init() {}
     
@@ -18,7 +19,7 @@ class RemoteDataRequestCenter {
         guard let city = city, !(city.isEmpty) else { return }
         
         // url. An example: http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=7&appid=542ffd081e67f4512b705f89d2a611b2
-        let url = "\(String(describing: weatherServer))q=\(String(describing: city))&mode=json&units=metric&cnt=7&appid=\(OWMAPIKey)"
+        let url = "\(String(describing: RemoteDataRequestCenter.weatherServer))q=\(String(describing: city))&mode=json&units=metric&cnt=7&appid=\(OWMAPIKey)"
         
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded",
@@ -36,6 +37,17 @@ class RemoteDataRequestCenter {
             completion(data, response, error)
         })
         dataTask.resume()
+    }
+    
+    static func getWeatherImage(code: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
+        guard let code = code, !(code.isEmpty) else { return }
+        
+        // url. An example: http://openweathermap.org/img/w/10d.png
+        let url = "\(String(describing: RemoteDataRequestCenter.weatherIconServer))\(String(describing: code)).png"
+        
+        URLSession.shared.dataTask(with: NSURL(string: url)! as URL) { (data, response, error) -> Void in
+            completion(data, response, error)
+        }.resume()
     }
     
 }

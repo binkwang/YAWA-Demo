@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,22 +21,33 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogz-In-ryo">
-                        <rect key="frame" x="20" y="0.0" width="280" height="44"/>
+                        <rect key="frame" x="20" y="0.0" width="240.5" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5zQ-UF-uFh">
+                        <rect key="frame" x="260.5" y="4" width="39.5" height="35.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5zQ-UF-uFh" secondAttribute="height" multiplier="10:9" id="7Oz-t0-tVZ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ogz-In-ryo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2sk-jg-VoS"/>
-                    <constraint firstItem="Ogz-In-ryo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TM7-vC-JSp"/>
-                    <constraint firstAttribute="bottom" secondItem="Ogz-In-ryo" secondAttribute="bottom" id="TR1-CT-5qP"/>
-                    <constraint firstAttribute="trailing" secondItem="Ogz-In-ryo" secondAttribute="trailing" constant="20" id="z76-d2-ssX"/>
+                    <constraint firstItem="5zQ-UF-uFh" firstAttribute="leading" secondItem="Ogz-In-ryo" secondAttribute="trailing" id="1Ad-4Q-unP"/>
+                    <constraint firstItem="5zQ-UF-uFh" firstAttribute="leading" secondItem="Ogz-In-ryo" secondAttribute="trailing" id="984-mY-hem"/>
+                    <constraint firstItem="Ogz-In-ryo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ggj-ed-87G"/>
+                    <constraint firstItem="5zQ-UF-uFh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="YD6-qY-uX7"/>
+                    <constraint firstAttribute="trailing" secondItem="5zQ-UF-uFh" secondAttribute="trailing" constant="20" id="d76-Fq-oDX"/>
+                    <constraint firstItem="Ogz-In-ryo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iY3-o3-H6k"/>
+                    <constraint firstAttribute="bottom" secondItem="Ogz-In-ryo" secondAttribute="bottom" id="obD-is-xpS"/>
+                    <constraint firstAttribute="bottom" secondItem="5zQ-UF-uFh" secondAttribute="bottom" constant="4" id="sRd-FM-kbe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="Ogz-In-ryo" id="XF8-qg-Vir"/>
+                <outlet property="weatherIconView" destination="5zQ-UF-uFh" id="8g3-3Y-MyK"/>
             </connections>
             <point key="canvasLocation" x="-36" y="56"/>
         </tableViewCell>

@@ -60,41 +60,41 @@ class WeatherDetailViewController: UIViewController, UITableViewDataSource, UITa
             fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
         }
         
-        var text: String?
+//        var text: String?
         switch indexPath.row {
         case 0:
             if let city = city {
-                text = String(describing:"city: \(city)")
+                cell.labelText = String(describing:"city: \(city)")
             }
         case 1:
             if let date = weatherCondition?.datePrintFormat {
-                text = String(describing:"date: \(date)")
+                cell.labelText = String(describing:"date: \(date)")
             }
         case 2:
             if let main = weatherCondition?.weathers[0].main {
-                text = String(describing:"main weather: \(main)")
+                cell.labelText = String(describing:"main weather: \(main)")
             }
         case 3:
             if let icon = weatherCondition?.weathers[0].icon {
-                text = String(describing:"weather icon (have not converted): \(icon)")
+                cell.labelText = String(describing:"weather icon (code:\(icon)): ")
+                cell.weatherCode = icon
             }
         case 4:
             if let description = weatherCondition?.weathers[0].description {
-                text = String(describing:"description: \(description)")
+                cell.labelText = String(describing:"description: \(description)")
             }
         case 5:
             if let min = weatherCondition?.temp?.min {
-                text = String(describing:"min temp: \(min)")
+                cell.labelText = String(describing:"min temp: \(min)")
             }
         case 6:
             if let max = weatherCondition?.temp?.max {
-                text = String(describing:"max temp: \(max)")
+                cell.labelText = String(describing:"max temp: \(max)")
             }
         default:
-            text = ""
+            cell.labelText = ""
         }
-        
-        cell.label?.text = text
+//        cell.labelText = text
         
         return cell
     }
