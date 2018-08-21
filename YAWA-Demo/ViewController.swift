@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     }
     var city: City?
     
-    var remoteDataRequestCenter: RemoteDataRequestCenter = RemoteDataRequestCenter()
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -63,10 +61,11 @@ class ViewController: UIViewController {
         
         let spinner = UIViewController.displaySpinner(onView: self.view)
         
-        remoteDataRequestCenter.fetchWeathers(city: city) { (data, response, error) in
-            DispatchQueue.main.async() {
-                UIViewController.removeSpinner(spinner: spinner)
-            }
+        RemoteDataRequestCenter.shared.fetchWeathers(city: city) { [weak self] (data, response, error) in
+            
+            guard let strongSelf = self else { return }
+            
+            UIViewController.removeSpinner(spinner: spinner)
             
             if let data = data {
                 do {
@@ -76,15 +75,15 @@ class ViewController: UIViewController {
                         
                         let invalidAPIKeyError = InvalidAPIKeyError.init(with: json)
                         if let cod = invalidAPIKeyError.cod, cod==401 {
-                            self.showAlert("ERROR", "Invalid API key")
+                            strongSelf.showAlert("ERROR", "Invalid API key")
                         }
                         
                         let cityWeathers = CityWeathers.init(with: json)
-                        self.city = cityWeathers.city
+                        strongSelf.city = cityWeathers.city
                         
-                        self.weatherConditions.removeAll()
+                        strongSelf.weatherConditions.removeAll()
                         cityWeathers.weatherConditions.forEach({ (weatherCondition) in
-                            self.weatherConditions.append(weatherCondition)
+                            strongSelf.weatherConditions.append(weatherCondition)
                         })
                         
                         print(cityWeathers.city?.name as Any)
@@ -94,11 +93,11 @@ class ViewController: UIViewController {
                     
                 } catch let error as NSError {
                     print(error)
-                    self.showAlert("ERROR", "Error Occered")
+                    strongSelf.showAlert("ERROR", "Error Occered")
                 }
             } else if let error = error {
                 print(error)
-                self.showAlert("ERROR", "Error Occered")
+                strongSelf.showAlert("ERROR", "Error Occered")
             }
         }
     }
@@ -179,29 +178,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         cell.weatherCondition = self.weatherConditions[indexPath.row]
         
         return cell
-    }
-}
-
-extension UIViewController {
-    class func displaySpinner(onView: UIView) -> UIView {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            onView.addSubview(spinnerView)
-        }
-        
-        return spinnerView
-    }
-    
-    class func removeSpinner(spinner: UIView) {
-        DispatchQueue.main.async {
-            spinner.removeFromSuperview()
-        }
     }
 }
 

@@ -19,10 +19,11 @@ class DetailPageCell: UITableViewCell {
     }
     var weatherCode: String? {
         didSet {
-            RemoteDataRequestCenter.getWeatherImage(code: weatherCode) { (data, response, error) -> Void in
+            RemoteDataRequestCenter.shared.getWeatherImage(code: weatherCode) { [weak self] (data, response, error) -> Void in
+                guard let strongSelf = self else { return }
                 DispatchQueue.main.async {
                     if let data = data {
-                        self.weatherIconView.image = UIImage(data: data)
+                        strongSelf.weatherIconView.image = UIImage(data: data)
                     }
                 }
             }

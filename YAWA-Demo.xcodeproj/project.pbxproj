@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2329941D212BAEAD003A4A5C /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329941C212BAEAD003A4A5C /* UIViewController+.swift */; };
 		236B5C4B211FC66800769D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C4A211FC66800769D25 /* AppDelegate.swift */; };
 		236B5C4D211FC66800769D25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C4C211FC66800769D25 /* ViewController.swift */; };
 		236B5C50211FC66800769D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C4E211FC66800769D25 /* Main.storyboard */; };
@@ -20,7 +21,7 @@
 		236B5C80211FCE2300769D25 /* WeatherTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */; };
 		236B5C82211FE46100769D25 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */; };
 		236B5C85211FEE3900769D25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C84211FEE3900769D25 /* Weather.swift */; };
-		236B5C87211FF4D300769D25 /* OWMAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C86211FF4D300769D25 /* OWMAPIKey.swift */; };
+		236B5C87211FF4D300769D25 /* OWMServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C86211FF4D300769D25 /* OWMServerConfig.swift */; };
 		236B5C8B211FF6EC00769D25 /* RemoteDataRequestCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C8A211FF6EC00769D25 /* RemoteDataRequestCenter.swift */; };
 		237A7E8F212006EE0017D907 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E8E212006EE0017D907 /* City.swift */; };
 		237A7E9121200AF80017D907 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E9021200AF80017D907 /* Temp.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2329941C212BAEAD003A4A5C /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		236B5C47211FC66800769D25 /* YAWA-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YAWA-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		236B5C4A211FC66800769D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236B5C4C211FC66800769D25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewHeader.xib; sourceTree = "<group>"; };
 		236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 		236B5C84211FEE3900769D25 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		236B5C86211FF4D300769D25 /* OWMAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMAPIKey.swift; sourceTree = "<group>"; };
+		236B5C86211FF4D300769D25 /* OWMServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMServerConfig.swift; sourceTree = "<group>"; };
 		236B5C8A211FF6EC00769D25 /* RemoteDataRequestCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataRequestCenter.swift; sourceTree = "<group>"; };
 		237A7E8E212006EE0017D907 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		237A7E9021200AF80017D907 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2329941B212BAE94003A4A5C /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				2329941C212BAEAD003A4A5C /* UIViewController+.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		236B5C3E211FC66800769D25 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		236B5C49211FC66800769D25 /* YAWA-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2329941B212BAE94003A4A5C /* Extention */,
 				237A7E96212012370017D907 /* DataRequest */,
 				236B5C83211FEE2600769D25 /* Model */,
 				236B5C78211FC81400769D25 /* UI */,
@@ -188,7 +199,7 @@
 		237A7E96212012370017D907 /* DataRequest */ = {
 			isa = PBXGroup;
 			children = (
-				236B5C86211FF4D300769D25 /* OWMAPIKey.swift */,
+				236B5C86211FF4D300769D25 /* OWMServerConfig.swift */,
 				236B5C8A211FF6EC00769D25 /* RemoteDataRequestCenter.swift */,
 			);
 			path = DataRequest;
@@ -330,13 +341,14 @@
 			files = (
 				236B5C8B211FF6EC00769D25 /* RemoteDataRequestCenter.swift in Sources */,
 				237A7E95212010040017D907 /* CityWeathers.swift in Sources */,
+				2329941D212BAEAD003A4A5C /* UIViewController+.swift in Sources */,
 				236B5C7B211FC85B00769D25 /* WeatherTableViewCell.swift in Sources */,
 				237A7E8F212006EE0017D907 /* City.swift in Sources */,
 				236B5C4D211FC66800769D25 /* ViewController.swift in Sources */,
 				236B5C7E211FCDF600769D25 /* WeatherTableViewHeader.swift in Sources */,
 				236B5C82211FE46100769D25 /* WeatherDetailViewController.swift in Sources */,
 				236B5C85211FEE3900769D25 /* Weather.swift in Sources */,
-				236B5C87211FF4D300769D25 /* OWMAPIKey.swift in Sources */,
+				236B5C87211FF4D300769D25 /* OWMServerConfig.swift in Sources */,
 				236B5C4B211FC66800769D25 /* AppDelegate.swift in Sources */,
 				237A7E9121200AF80017D907 /* Temp.swift in Sources */,
 				237A7E9321200BCC0017D907 /* WeatherCondition.swift in Sources */,
