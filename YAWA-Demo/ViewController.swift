@@ -101,24 +101,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: private methods
-
-    private func showAlert(_ title: String, _ message: String) {
-        DispatchQueue.main.async() {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                switch action.style {
-                case .default:
-                    print("default")
-                case .cancel:
-                    print("cancel")
-                case .destructive:
-                    print("destructive")
-                }}))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
 }
 
 // MARK: UITableViewDataSource & UITableViewDelegate
