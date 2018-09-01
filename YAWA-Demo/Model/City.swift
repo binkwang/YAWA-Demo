@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct City {
+class City {
     var id: Int?
     var name: String?
     var country: String?

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Temp {
+class Temp {
     var day: Double?
     var min: Double?
     var max: Double?

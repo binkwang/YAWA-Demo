@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct WeatherCondition {
+class WeatherCondition {
     var temp: Temp?
     var weathers: [Weather] = []
     var pressure: Double?

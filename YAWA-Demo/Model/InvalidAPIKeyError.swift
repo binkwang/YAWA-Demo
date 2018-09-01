@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct InvalidAPIKeyError {
+class InvalidAPIKeyError {
     var cod: Int?
     var message: String?
     

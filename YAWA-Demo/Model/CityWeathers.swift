@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CityWeathers {
+class CityWeathers {
     var city: City?
     var weatherConditions: [WeatherCondition] = []
     
