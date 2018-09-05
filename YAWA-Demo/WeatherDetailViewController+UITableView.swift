@@ -8,8 +8,7 @@
 
 import UIKit
 
-extension WeatherDetailViewController: UITableViewDataSource, UITableViewDelegate {
-    // UITableViewDelegate
+extension WeatherDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -18,8 +17,9 @@ extension WeatherDetailViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
-    
-    // UITableViewDataSource
+}
+
+extension WeatherDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -41,28 +41,28 @@ extension WeatherDetailViewController: UITableViewDataSource, UITableViewDelegat
                 cell.labelText = String(describing:"city: \(city)")
             }
         case 1:
-            if let date = weatherCondition?.datePrintFormat {
-                cell.labelText = String(describing:"date: \(date)")
+            if let dt = dayWeather?.dt {
+                cell.labelText = Date.printFormat(dt: dt)
             }
         case 2:
-            if let main = weatherCondition?.weathers[0].main {
+            if let main = dayWeather?.weather?[0].main {
                 cell.labelText = String(describing:"main weather: \(main)")
             }
         case 3:
-            if let icon = weatherCondition?.weathers[0].icon {
+            if let icon = dayWeather?.weather?[0].icon {
                 cell.labelText = String(describing:"weather icon (code:\(icon)): ")
                 cell.weatherCode = icon
             }
         case 4:
-            if let description = weatherCondition?.weathers[0].description {
+            if let description = dayWeather?.weather?[0].description {
                 cell.labelText = String(describing:"description: \(description)")
             }
         case 5:
-            if let min = weatherCondition?.temp?.min {
+            if let min = dayWeather?.temp?.min {
                 cell.labelText = String(describing:"min temp: \(min)")
             }
         case 6:
-            if let max = weatherCondition?.temp?.max {
+            if let max = dayWeather?.temp?.max {
                 cell.labelText = String(describing:"max temp: \(max)")
             }
         default:

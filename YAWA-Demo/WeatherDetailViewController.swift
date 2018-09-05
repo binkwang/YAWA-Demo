@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherDetailViewController: UIViewController {
 
-    var weatherCondition: WeatherCondition?
+    var dayWeather: OWMResponse.DayWeather?
     var city: String?
     @IBOutlet weak var tableView: UITableView!
     

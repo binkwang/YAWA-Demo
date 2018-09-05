@@ -16,17 +16,17 @@ class WeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var weatherCondition: WeatherCondition? {
+    var dayWeather: OWMResponse.DayWeather? {
         didSet {
-            guard let weatherCondition = weatherCondition else { return }
+            guard let dayWeather = dayWeather else { return }
             
-            if let date = weatherCondition.datePrintFormat {
-                self.dateLabel.text = String(describing:"\(date)")
+            if let dt = dayWeather.dt {
+                self.dateLabel.text = Date.printFormat(dt: dt)
             }
-            if let temp = weatherCondition.temp?.day {
+            if let temp = dayWeather.temp?.day {
                 self.temperatureLabel.text = String(describing:"day temp: \(temp)")
             }
-            if let description = weatherCondition.weathers[0].description {
+            if let description = dayWeather.weather?[0].description {
                 self.descriptionLabel.text = String(describing:"description: \(description)")
             }
         }

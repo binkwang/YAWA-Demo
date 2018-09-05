@@ -8,6 +8,7 @@
 
 import Foundation
 
+/**
 class City {
     var id: Int?
     var name: String?
@@ -22,6 +23,7 @@ class City {
         population = dictionary["population"] as? Int
     }
 }
+ */
 
 /** Example JSON
  {

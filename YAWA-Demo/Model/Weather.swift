@@ -8,6 +8,7 @@
 
 import Foundation
 
+/**
 class Weather {
     var id: Int?
     var main: String?
@@ -22,6 +23,7 @@ class Weather {
         icon = dictionary["icon"] as? String
     }
 }
+ */
 
 /** Json example
 {

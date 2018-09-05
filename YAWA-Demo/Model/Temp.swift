@@ -8,6 +8,7 @@
 
 import Foundation
 
+/**
 class Temp {
     var day: Double?
     var min: Double?
@@ -26,6 +27,7 @@ class Temp {
         morn = dictionary["morn"] as? Double
     }
 }
+ */
 
 /** Json example
 {

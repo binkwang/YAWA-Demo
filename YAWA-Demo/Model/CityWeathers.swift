@@ -8,6 +8,7 @@
 
 import Foundation
 
+/**
 class CityWeathers {
     var city: City?
     var weatherConditions: [WeatherCondition] = []
@@ -15,7 +16,7 @@ class CityWeathers {
     init(with dictionary: [String: Any]?) {
         guard let dictionary = dictionary else { return }
         city = City.init(with: dictionary["city"] as? [String: Any])
-        
+
         if let weatherContitionArr = dictionary["list"] as? [[String: Any]] {
             weatherContitionArr.forEach { (weatherContitionDic) in
                 let weatherCondition = WeatherCondition.init(with: weatherContitionDic)
@@ -24,6 +25,7 @@ class CityWeathers {
         }
     }
 }
+ */
 
 /** Json example
 {

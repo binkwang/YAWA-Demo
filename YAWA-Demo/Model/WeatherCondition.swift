@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/**
 class WeatherCondition {
     var temp: Temp?
     var weathers: [Weather] = []
@@ -41,12 +41,13 @@ class WeatherCondition {
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "MMM dd,yyyy"
             datePrintFormat = dateFormatterPrint.string(from: date)
-            //print(dateFormatterPrint.string(from: date))
         }
         
     }
 }
+ */
 
+ 
 /** Json example
 {
     dt: 1533988800,

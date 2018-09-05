@@ -33,6 +33,8 @@
 		2395814A213A8E03009290FE /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23958149213A8E03009290FE /* UIImageView+.swift */; };
 		2395814C213A923C009290FE /* ViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2395814B213A923C009290FE /* ViewController+UITableView.swift */; };
 		2395814E213A9282009290FE /* WeatherDetailViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2395814D213A9282009290FE /* WeatherDetailViewController+UITableView.swift */; };
+		23EE2213213FCEAF00057BC1 /* OWMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE2212213FCEAF00057BC1 /* OWMResponse.swift */; };
+		23EE2215213FDFE000057BC1 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE2214213FDFE000057BC1 /* Date+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		23958149213A8E03009290FE /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		2395814B213A923C009290FE /* ViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableView.swift"; sourceTree = "<group>"; };
 		2395814D213A9282009290FE /* WeatherDetailViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherDetailViewController+UITableView.swift"; sourceTree = "<group>"; };
+		23EE2212213FCEAF00057BC1 /* OWMResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMResponse.swift; sourceTree = "<group>"; };
+		23EE2214213FDFE000057BC1 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				2329941C212BAEAD003A4A5C /* UIViewController+.swift */,
 				23958149213A8E03009290FE /* UIImageView+.swift */,
+				23EE2214213FDFE000057BC1 /* Date+.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				236B5C84211FEE3900769D25 /* Weather.swift */,
 				237A7E9021200AF80017D907 /* Temp.swift */,
 				237A7E9B212044110017D907 /* InvalidAPIKeyError.swift */,
+				23EE2212213FCEAF00057BC1 /* OWMResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,8 +358,10 @@
 				237A7E95212010040017D907 /* CityWeathers.swift in Sources */,
 				2395814E213A9282009290FE /* WeatherDetailViewController+UITableView.swift in Sources */,
 				2329941D212BAEAD003A4A5C /* UIViewController+.swift in Sources */,
+				23EE2213213FCEAF00057BC1 /* OWMResponse.swift in Sources */,
 				236B5C7B211FC85B00769D25 /* WeatherTableViewCell.swift in Sources */,
 				2395814C213A923C009290FE /* ViewController+UITableView.swift in Sources */,
+				23EE2215213FDFE000057BC1 /* Date+.swift in Sources */,
 				2395814A213A8E03009290FE /* UIImageView+.swift in Sources */,
 				237A7E8F212006EE0017D907 /* City.swift in Sources */,
 				236B5C4D211FC66800769D25 /* ViewController.swift in Sources */,

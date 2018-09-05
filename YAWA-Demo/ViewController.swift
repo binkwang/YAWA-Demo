@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var weatherConditions: [WeatherCondition] = [] {
+    var dayWeather: [OWMResponse.DayWeather] = [] {
         didSet {
         }
     }
-    var city: City?
+    var city: OWMResponse.City?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         if segue.identifier == "showWeatherDetailPage"  {
             let indexPath: NSIndexPath = self.tableView.indexPath(for: sender as! WeatherTableViewCell)! as NSIndexPath
             if let destinationViewController = segue.destination as? WeatherDetailViewController {
-                destinationViewController.weatherCondition = (self.weatherConditions)[indexPath.row]
+                destinationViewController.dayWeather = (self.dayWeather)[indexPath.row]
                 destinationViewController.city = self.city?.name
             }
         }
@@ -57,7 +57,6 @@ class ViewController: UIViewController {
             showAlert("ERROR", "Please input an invalid city name")
             return
         }
-        print("fetchWeatherDataWithCity: \(city)")
         
         let spinner = UIViewController.displaySpinner(onView: self.view)
         
@@ -68,32 +67,32 @@ class ViewController: UIViewController {
             UIViewController.removeSpinner(spinner: spinner)
             
             if let data = data {
-                do {
-                    let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
-                    
-                    if let json = jsonSerialized {
+                
+                DispatchQueue.global(qos: .utility).async {
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let owmResponse = try jsonDecoder.decode(OWMResponse.self, from: data)
                         
-                        let invalidAPIKeyError = InvalidAPIKeyError.init(with: json)
-                        if let cod = invalidAPIKeyError.cod, cod==401 {
-                            strongSelf.showAlert("ERROR", "Invalid API key")
+                        if let city = owmResponse.city, let list = owmResponse.list {
+                            DispatchQueue.main.async {
+                                strongSelf.city = city
+                                list.forEach({ (dayWeather) in
+                                    strongSelf.dayWeather.append(dayWeather)
+                                })
+                                completion()
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                strongSelf.showAlert("ERROR", "Error Occered")
+                            }
                         }
-                        
-                        let cityWeathers = CityWeathers.init(with: json)
-                        strongSelf.city = cityWeathers.city
-                        
-                        strongSelf.weatherConditions.removeAll()
-                        cityWeathers.weatherConditions.forEach({ (weatherCondition) in
-                            strongSelf.weatherConditions.append(weatherCondition)
-                        })
-                        
-                        print(cityWeathers.city?.name as Any)
-                        
-                        completion()
+
+                    } catch let error {
+                        DispatchQueue.main.async {
+                            strongSelf.showAlert("ERROR", error.localizedDescription)
+                        }
                     }
-                    
-                } catch let error as NSError {
-                    print(error)
-                    strongSelf.showAlert("ERROR", "Error Occered")
                 }
             } else if let error = error {
                 print(error)

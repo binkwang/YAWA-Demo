@@ -8,10 +8,8 @@
 
 import UIKit
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate
+extension ViewController: UITableViewDelegate
 {
-    // UITableViewDelegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print(indexPath.section as Any)
@@ -19,7 +17,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         
         let cell = tableView.cellForRow(at: indexPath)
         self.performSegue(withIdentifier: "showWeatherDetailPage", sender: cell)
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -44,15 +41,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         }
         return headView
     }
-    
-    // UITableViewDataSource
-    
+}
+
+extension ViewController: UITableViewDataSource
+{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weatherConditions.count
+        return dayWeather.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,7 +58,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         guard let cell = tableView.dequeueReusableCell(withIdentifier: kWeatherTableViewCellReuseIdentifier, for: indexPath) as? WeatherTableViewCell else {
             fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
         }
-        cell.weatherCondition = self.weatherConditions[indexPath.row]
+        cell.dayWeather = self.dayWeather[indexPath.row]
         
         return cell
     }
