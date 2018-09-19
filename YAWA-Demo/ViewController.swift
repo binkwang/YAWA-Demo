@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         
         RemoteDataRequestCenter.shared.fetchWeathers(city: city) { [weak self] (data, response, error) in
             
-            guard let strongSelf = self else { return }
+            guard let weakSelf = self else { return }
             
             UIViewController.removeSpinner(spinner: spinner)
             
@@ -76,27 +76,27 @@ class ViewController: UIViewController {
                         
                         if let city = owmResponse.city, let list = owmResponse.list {
                             DispatchQueue.main.async {
-                                strongSelf.city = city
+                                weakSelf.city = city
                                 list.forEach({ (dayWeather) in
-                                    strongSelf.dayWeather.append(dayWeather)
+                                    weakSelf.dayWeather.append(dayWeather)
                                 })
                                 completion()
                             }
                         } else {
                             DispatchQueue.main.async {
-                                strongSelf.showAlert("ERROR", "Error Occered")
+                                weakSelf.showAlert("ERROR", "Error Occered")
                             }
                         }
 
                     } catch let error {
                         DispatchQueue.main.async {
-                            strongSelf.showAlert("ERROR", error.localizedDescription)
+                            weakSelf.showAlert("ERROR", error.localizedDescription)
                         }
                     }
                 }
             } else if let error = error {
                 print(error)
-                strongSelf.showAlert("ERROR", "Error Occered")
+                weakSelf.showAlert("ERROR", "Error Occered")
             }
         }
     }
