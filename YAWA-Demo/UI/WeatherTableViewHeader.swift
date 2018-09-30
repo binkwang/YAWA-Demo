@@ -11,7 +11,7 @@ import UIKit
 class WeatherTableViewHeader: UIView {
     
     let nibName = "WeatherTableViewHeader"
-    var fetchHandler: ((_ city: String?) -> Void)?
+    var fetchHandler: ((_ cityName: String?) -> Void)?
     
     //MARK: - IBOutlets
     @IBOutlet weak var customView: UIView!

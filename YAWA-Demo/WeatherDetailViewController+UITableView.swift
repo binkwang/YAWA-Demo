@@ -37,7 +37,7 @@ extension WeatherDetailViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            if let city = city {
+            if let city = self.cityName {
                 cell.labelText = String(describing:"city: \(city)")
             }
         case 1:

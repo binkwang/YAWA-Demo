@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var dayWeather: [OWMResponse.DayWeather] = [] {
-        didSet {
-        }
-    }
-    var city: OWMResponse.City?
+    var dataProvider = WeatherDataProvider()
+    
+    var cityObject: OWMResponse.City?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,9 +24,10 @@ class ViewController: UIViewController {
         
         // Init TableView
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = dataProvider
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         tableView.separatorColor = UIColor.gray
+        
         let nib = UINib.init(nibName: "WeatherTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: kWeatherTableViewCellReuseIdentifier)
     }
@@ -39,66 +38,13 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        //the sender is the actual UITableViewCell. When you have the cell, there are a few ways to get the index path.
-
+        
         if segue.identifier == "showWeatherDetailPage"  {
             let indexPath: NSIndexPath = self.tableView.indexPath(for: sender as! WeatherTableViewCell)! as NSIndexPath
             if let destinationViewController = segue.destination as? WeatherDetailViewController {
-                destinationViewController.dayWeather = (self.dayWeather)[indexPath.row]
-                destinationViewController.city = self.city?.name
-            }
-        }
-    }
-    
-    func fetchWeathers(city: String?, completion: @escaping () -> Swift.Void) -> Swift.Void {
-        
-        guard let city = city, !(city.isEmpty) else {
-            showAlert("ERROR", "Please input an invalid city name")
-            return
-        }
-        
-        let spinner = UIViewController.displaySpinner(onView: self.view)
-        
-        RemoteDataRequestCenter.shared.fetchWeathers(city: city) { [weak self] (data, response, error) in
-            
-            guard let weakSelf = self else { return }
-            
-            UIViewController.removeSpinner(spinner: spinner)
-            
-            if let data = data {
-                
-                DispatchQueue.global(qos: .utility).async {
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let owmResponse = try jsonDecoder.decode(OWMResponse.self, from: data)
-                        
-                        if let city = owmResponse.city, let list = owmResponse.list {
-                            DispatchQueue.main.async {
-                                weakSelf.city = city
-                                list.forEach({ (dayWeather) in
-                                    weakSelf.dayWeather.append(dayWeather)
-                                })
-                                completion()
-                            }
-                        } else {
-                            DispatchQueue.main.async {
-                                weakSelf.showAlert("ERROR", "Error Occered")
-                            }
-                        }
-
-                    } catch let error {
-                        DispatchQueue.main.async {
-                            weakSelf.showAlert("ERROR", error.localizedDescription)
-                        }
-                    }
-                }
-            } else if let error = error {
-                print(error)
-                weakSelf.showAlert("ERROR", "Error Occered")
+                destinationViewController.dayWeather = (self.dataProvider.dayWeather)[indexPath.row]
+                destinationViewController.cityName = self.cityObject?.name
             }
         }
     }
 }
-

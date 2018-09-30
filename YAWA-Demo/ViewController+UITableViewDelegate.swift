@@ -29,37 +29,32 @@ extension ViewController: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headView = WeatherTableViewHeader.init(frame: CGRect.init())
-        headView.fetchHandler = { (city) in
-            self.fetchWeathers(city: city, completion: {
+        
+        headView.fetchHandler = { (cityName) in
+            self.dataProvider.fetchWeathers(cityName: cityName, requestStart: {
                 DispatchQueue.main.async() {
-                    self.tableView.reloadData()
-                    headView.cityLabel.text = self.city?.name
+                    // TODO: show alert
+                }
+            }, requestEnd: {
+                DispatchQueue.main.async() {
+                    // TODO: dismiss alert
+                }
+            }, success: { [weak self] (cityObject) in
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async() {
+                    weakSelf.cityObject = cityObject
+                    weakSelf.tableView.reloadData()
+                    headView.cityLabel.text = weakSelf.cityObject?.name
                     headView.textField.text = ""
                     headView.textField.resignFirstResponder()
                 }
-            })
+            }, failure: { [weak self] (errMessage) in
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async() {
+                    weakSelf.showAlert("ERROR", "Please input an invalid city name")
+                }
+            })            
         }
         return headView
-    }
-}
-
-extension ViewController: UITableViewDataSource
-{
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dayWeather.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: kWeatherTableViewCellReuseIdentifier, for: indexPath) as? WeatherTableViewCell else {
-            fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
-        }
-        cell.dayWeather = self.dayWeather[indexPath.row]
-        
-        return cell
     }
 }

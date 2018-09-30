@@ -19,12 +19,12 @@ class RemoteDataRequestCenter {
         static let WeatherIcon: String = "http://openweathermap.org/img/w/"
     }
     
-    func fetchWeathers(city: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
+    func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) {
         
-        guard let city = city, !(city.isEmpty) else { return }
+        guard let cityName = cityName, !(cityName.isEmpty) else { return }
         
         // url. An example: http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=7&appid=542ffd081e67f4512b705f89d2a611b2
-        let url = "\(String(describing: Endpoint.Weather))q=\(String(describing: city))&mode=json&units=metric&cnt=7&appid=\(OWMAPIKey)"
+        let url = "\(String(describing: Endpoint.Weather))q=\(String(describing: cityName))&mode=json&units=metric&cnt=7&appid=\(OWMAPIKey)"
         
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded",

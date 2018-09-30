@@ -11,7 +11,7 @@ import UIKit
 class WeatherDetailViewController: UIViewController {
 
     var dayWeather: OWMResponse.DayWeather?
-    var city: String?
+    var cityName: String?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
