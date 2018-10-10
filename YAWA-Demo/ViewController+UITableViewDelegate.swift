@@ -40,18 +40,18 @@ extension ViewController: UITableViewDelegate
                     // TODO: dismiss alert
                 }
             }, success: { [weak self] (cityObject) in
-                guard let weakSelf = self else { return }
+                guard let strongSelf = self else { return }
                 DispatchQueue.main.async() {
-                    weakSelf.cityObject = cityObject
-                    weakSelf.tableView.reloadData()
-                    headView.cityLabel.text = weakSelf.cityObject?.name
+                    strongSelf.cityObject = cityObject
+                    strongSelf.tableView.reloadData()
+                    headView.cityLabel.text = strongSelf.cityObject?.name
                     headView.textField.text = ""
                     headView.textField.resignFirstResponder()
                 }
             }, failure: { [weak self] (errMessage) in
-                guard let weakSelf = self else { return }
+                guard let strongSelf = self else { return }
                 DispatchQueue.main.async() {
-                    weakSelf.showAlert("ERROR", "Please input an invalid city name")
+                    strongSelf.showAlert("ERROR", "Please input an invalid city name")
                 }
             })            
         }

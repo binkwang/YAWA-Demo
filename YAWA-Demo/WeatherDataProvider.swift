@@ -44,7 +44,7 @@ class WeatherDataProvider: NSObject, UITableViewDataSource {
         
         requestStart()
         RemoteDataRequestCenter.shared.fetchWeathers(cityName: cityName) { [weak self] (data, response, error) in
-            guard let weakSelf = self else { return }
+            guard let strongSelf = self else { return }
             requestEnd()
             
             if let data = data {
@@ -56,7 +56,7 @@ class WeatherDataProvider: NSObject, UITableViewDataSource {
                         
                         if let cityObject = owmResponse.city, let list = owmResponse.list {
                             list.forEach({ (dayWeather) in
-                                weakSelf.dayWeather.append(dayWeather)
+                                strongSelf.dayWeather.append(dayWeather)
                             })
                             success(cityObject)
                         } else {
