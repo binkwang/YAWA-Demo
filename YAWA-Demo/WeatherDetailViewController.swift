@@ -9,9 +9,9 @@
 import UIKit
 
 class WeatherDetailViewController: UIViewController {
-
-    var dayWeather: OWMResponse.DayWeather?
+    var dayWeather: Weather.DayWeatherViewModel?
     var cityName: String?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +24,7 @@ class WeatherDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         tableView.separatorColor = UIColor.gray
+        
         let nib = UINib.init(nibName: "DetailPageCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: kDetailPageCellReuseIdentifier)
     }

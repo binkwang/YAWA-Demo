@@ -1,12 +1,52 @@
 //
-//  OWMResponse.swift
+//  WeatherModels.swift
 //  YAWA-Demo
 //
-//  Created by Bink Wang on 9/5/18.
-//  Copyright © 2018 Bink Wang. All rights reserved.
+//  Created by bink.wang on 12/04/20.
+//  Copyright © 2020 Bink Wang. All rights reserved.
 //
 
-struct OWMResponse: Decodable {
+import Foundation
+
+enum Weather {
+    
+    // MARK: Weather List
+    enum LoadWeatherList {
+        struct Request {
+            var cityName: String
+        }
+        
+        struct Response {
+            var weather: WeatherResponse
+        }
+        
+        struct ViewModel {
+            var dayWeathers = [DayWeatherViewModel]()
+        }
+    }
+    
+    enum SelectDayWeather {
+        struct Request {
+            var index: Int
+        }
+        
+        struct Response {
+            var dayWeather: WeatherResponse.DayWeather
+        }
+        
+        struct ViewModel {
+            var dayWeather: DayWeatherViewModel
+        }
+    }
+    
+    struct DayWeatherViewModel {
+        var date: String
+        var temperature: String
+        var description: String
+    }
+}
+
+struct WeatherResponse: Decodable {
     
     // MARK: - Properties
     
@@ -95,4 +135,3 @@ struct OWMResponse: Decodable {
     ]
 }
  */
-

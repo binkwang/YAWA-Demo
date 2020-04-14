@@ -11,21 +11,21 @@ import XCTest
 
 class ViewControllerTests: XCTestCase {
     
-    func testControllerHasTableView() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self)).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
-            return XCTFail("Could not instantiate ViewController from main storyboard")
-        }
-        controller.loadViewIfNeeded()
-        XCTAssertNotNil(controller.tableView, "controller should have the property tableview")
-    }
-    
-    func testTableViewDataSourceIsWeatherDataProvider() {
-        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self)).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
-            return XCTFail("Could not instantiate ViewController from main storyboard")
-        }
-        controller.loadViewIfNeeded()
-        XCTAssertTrue(controller.tableView.dataSource is WeatherDataProvider, "tableview's data source should be WeatherDataProvider")
-    }
+//    func testControllerHasTableView() {
+//        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self)).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+//            return XCTFail("Could not instantiate ViewController from main storyboard")
+//        }
+//        controller.loadViewIfNeeded()
+//        XCTAssertNotNil(controller.tableView, "controller should have the property tableview")
+//    }
+//    
+//    func testTableViewDataSourceIsWeatherDataProvider() {
+//        guard let controller = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self)).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+//            return XCTFail("Could not instantiate ViewController from main storyboard")
+//        }
+//        controller.loadViewIfNeeded()
+//        XCTAssertTrue(controller.tableView.dataSource is WeatherDataProvider, "tableview's data source should be WeatherDataProvider")
+//    }
     
     
     

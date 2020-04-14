@@ -1,5 +1,5 @@
 //
-//  RemoteDataRequestCenter.swift
+//  RemoteDataService.swift
 //  YAWA-Demo
 //
 //  Created by Bink Wang on 8/12/18.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-class RemoteDataRequestCenter {
+class RemoteDataService {
     
-    static let shared = RemoteDataRequestCenter()
+    static let shared = RemoteDataService()
     
     private init() {}
     

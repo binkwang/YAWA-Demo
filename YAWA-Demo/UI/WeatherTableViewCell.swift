@@ -16,22 +16,6 @@ class WeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var dayWeather: OWMResponse.DayWeather? {
-        didSet {
-            guard let dayWeather = dayWeather else { return }
-            
-            if let dt = dayWeather.dt {
-                self.dateLabel.text = Date.printFormat(dt: dt)
-            }
-            if let temp = dayWeather.temp?.day {
-                self.temperatureLabel.text = String(describing:"day temp: \(temp)")
-            }
-            if let description = dayWeather.weather?[0].description {
-                self.descriptionLabel.text = String(describing:"description: \(description)")
-            }
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

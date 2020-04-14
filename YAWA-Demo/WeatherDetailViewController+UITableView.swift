@@ -26,7 +26,7 @@ extension WeatherDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,36 +37,15 @@ extension WeatherDetailViewController: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            if let city = self.cityName {
-                cell.labelText = String(describing:"city: \(city)")
-            }
+            cell.label.text = ""
         case 1:
-            if let dt = dayWeather?.dt {
-                cell.labelText = Date.printFormat(dt: dt)
-            }
+            cell.label.text = dayWeather?.date
         case 2:
-            if let main = dayWeather?.weather?[0].main {
-                cell.labelText = String(describing:"main weather: \(main)")
-            }
+            cell.label.text = dayWeather?.temperature
         case 3:
-            if let icon = dayWeather?.weather?[0].icon {
-                cell.labelText = String(describing:"weather icon (code:\(icon)): ")
-                cell.weatherCode = icon
-            }
-        case 4:
-            if let description = dayWeather?.weather?[0].description {
-                cell.labelText = String(describing:"description: \(description)")
-            }
-        case 5:
-            if let min = dayWeather?.temp?.min {
-                cell.labelText = String(describing:"min temp: \(min)")
-            }
-        case 6:
-            if let max = dayWeather?.temp?.max {
-                cell.labelText = String(describing:"max temp: \(max)")
-            }
+            cell.label.text = dayWeather?.description
         default:
-            cell.labelText = ""
+            cell.label.text = ""
         }
         
         return cell

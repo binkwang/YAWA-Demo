@@ -8,10 +8,14 @@
 
 import UIKit
 
+public protocol WeatherTableHeaderActionProtocol {
+    func onButtonTapped(text: String?)
+}
+
 class WeatherTableViewHeader: UIView {
     
     let nibName = "WeatherTableViewHeader"
-    var fetchHandler: ((_ cityName: String?) -> Void)?
+    var delegate: WeatherTableHeaderActionProtocol?
     
     //MARK: - IBOutlets
     @IBOutlet weak var customView: UIView!
@@ -88,8 +92,7 @@ class WeatherTableViewHeader: UIView {
     
     @IBAction private func fetchButtonTapped() {
         print("directionsButtonTapped..")
-        guard let fetchHandler = self.fetchHandler else { return }
-        fetchHandler(textField.text)
+        delegate?.onButtonTapped(text: textField.text)
     }
 }
 
