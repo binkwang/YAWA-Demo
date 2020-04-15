@@ -9,17 +9,22 @@
 import UIKit
 import Foundation
 
-//@objc
 protocol WeatherRoutingLogic {
     func navigateTo(dayWeather: Weather.DayWeatherViewModel)
 }
 
-class WeatherRouter: WeatherRoutingLogic {
+protocol WeatherDataPassing {
+    var dataStore: WeatherDataStore? { get }
+}
+
+class WeatherRouter: WeatherRoutingLogic, WeatherDataPassing {
     weak var viewController: WeatherViewController?
+    
+    // MARK: WeatherDataPassing
+    var dataStore: WeatherDataStore? // TODO: use dataStore instead of the parameter in navigateTo function
     
     // MARK: Routing
     func navigateTo(dayWeather: Weather.DayWeatherViewModel) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
         vc.dayWeather = dayWeather

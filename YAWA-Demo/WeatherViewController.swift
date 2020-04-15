@@ -33,10 +33,9 @@ class WeatherViewController: UIViewController {
         viewController.router = router
         interactor.presenter = presenter
         interactor.worker = WeatherWorker()
-        interactor.viewController = viewController
         presenter.viewController = viewController
         router.viewController = viewController
-//        router.dataStore = interactor
+        router.dataStore = interactor
     }
     
     @IBOutlet weak var tableView: UITableView!

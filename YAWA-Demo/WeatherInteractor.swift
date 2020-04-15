@@ -13,8 +13,11 @@ protocol WeatherBusinessLogic {
     func selectDayWeather(request: Weather.SelectDayWeather.Request)
 }
 
-class WeatherInteractor: WeatherBusinessLogic {
-    weak var viewController: WeatherViewController?
+protocol WeatherDataStore {
+    var selectedDayWeather: WeatherResponse.DayWeather? { get set }
+}
+
+class WeatherInteractor: WeatherBusinessLogic, WeatherDataStore {
 
     // MARK: Clean Swift
 
@@ -23,6 +26,9 @@ class WeatherInteractor: WeatherBusinessLogic {
     
     // MARK: Data
     var weatherResponse: WeatherResponse?
+    
+    // MARK: WeatherDataStore
+    var selectedDayWeather: WeatherResponse.DayWeather?
     
     
     // MARK: Load OpenAndApply list
@@ -52,6 +58,7 @@ class WeatherInteractor: WeatherBusinessLogic {
     
     func selectDayWeather(request: Weather.SelectDayWeather.Request) {
         guard let dayWeather = weatherResponse?.list?[request.index] else { return }
+        selectedDayWeather = dayWeather
         presenter?.presetnWeatherDetail(response: Weather.SelectDayWeather.Response(dayWeather: dayWeather))
     }
 }
