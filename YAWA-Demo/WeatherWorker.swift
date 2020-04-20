@@ -21,11 +21,6 @@ class WeatherWorker {
                        requestEnd: @escaping () -> Void,
                        success: @escaping (_ response: Weather.LoadWeatherList.Response) -> Void,
                        failure: @escaping (_ errMessage: String) -> Void) {
-            
-        guard let cityName = cityName, !(cityName.isEmpty) else {
-            failure("Please input an invalid city name")
-            return
-        }
         
         requestStart()
         
