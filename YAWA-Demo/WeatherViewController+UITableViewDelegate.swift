@@ -18,8 +18,19 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource {
         self.selectDayWeather(index: indexPath.row)
     }
     
+
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 10
+//    }
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -42,17 +53,22 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: kWeatherTableViewCellReuseIdentifier, for: indexPath) as? WeatherTableViewCell else {
-            fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
-        }
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: kWeatherTableViewCellReuseIdentifier) as? WeatherTableViewCell ?? initWeatherCellCell() else {
+//            fatalError("The dequeued cell is not an instance of SelectedPlaceCell.")
+//        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: kWeatherTableViewCellReuseIdentifier) as? WeatherTableViewCell ?? initWeatherCellCell()
         
         let dayWeather = self.dayWeathers[indexPath.row]
         
-        cell.dateLabel.text = dayWeather.date
-        cell.temperatureLabel.text = dayWeather.temperature
-        cell.descriptionLabel.text = dayWeather.description
-        
+        cell.updateContents(topText: dayWeather.date,
+                            middleText: dayWeather.temperature,
+                            bottomText: dayWeather.description)
         return cell
+    }
+    
+    private func initWeatherCellCell() -> WeatherTableViewCell {
+        return WeatherTableViewCell(reuseIdentifier: kWeatherTableViewCellReuseIdentifier)
     }
 }
 

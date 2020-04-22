@@ -7,57 +7,123 @@
 //
 
 import UIKit
+import SnapKit
 
 internal let kWeatherTableViewCellReuseIdentifier = "WeatherTableViewCell"
 
 class WeatherTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private let kLabelsTopBottomMargin: CGFloat = 10
+    private let kLabelsLeftRightMargin: CGFloat = 20
+    
+    // MARK: public class
+    
+    public init(reuseIdentifier: String?) {
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
+        backgroundColor = .clear
         
-        dateLabel.backgroundColor = UIColor.clear
-        temperatureLabel.backgroundColor = UIColor.clear
-        descriptionLabel.backgroundColor = UIColor.clear
-        
-        self.viewAutoLayout()
+        initView()
     }
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func updateContents(topText: String?, middleText: String?, bottomText: String?) {
+        topLabel.text = topText
+        middleLabel.text = middleText
+        buttomLabel.text = bottomText
+        updateComponentConstraint()
+    }
+    
+    // MARK: private class
+    
+    private func initView() {
+        addSubview(topLabel)
+        addSubview(middleLabel)
+        addSubview(buttomLabel)
+        buildConstraints()
+    }
+    
+    private func buildConstraints() {
+        topLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+        }
+        
+        middleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(topLabel.snp.bottom).offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+        }
+        
+        buttomLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(middleLabel.snp.bottom).offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.bottom.equalToSuperview().offset(-kLabelsTopBottomMargin)
+        }
+    }
+    
+    private func updateComponentConstraint() {
+        topLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+        }
+        
+        middleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(topLabel.snp.bottom).offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+        }
+        
+        buttomLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(middleLabel.snp.bottom).offset(kLabelsTopBottomMargin)
+            make.left.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.right.equalToSuperview().offset(kLabelsLeftRightMargin)
+            make.bottom.equalToSuperview().offset(-kLabelsTopBottomMargin)
+        }
+    }
+    
+    private lazy var topLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+    
+    private lazy var middleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+    
+    private lazy var buttomLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+    
+    // MARK: Overridefromsuperclass
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        topLabel.text = nil
+        middleLabel.text = nil
+        buttomLabel.text = nil
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
-    
-    func viewAutoLayout() {
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        let views = Dictionary(dictionaryLiteral: ("dateLabel",dateLabel), ("temperatureLabel",temperatureLabel), ("descriptionLabel",descriptionLabel)) as [String : Any]
-
-        let metrics = Dictionary(dictionaryLiteral: ("padding", 10),("indexLabel",40),("labelHeight",24),("dateLabelHeight",160))
-
-        let horizontal1 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[dateLabel(==dateLabelHeight)]-padding-[temperatureLabel]-20-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views)
-
-        let horizontal2 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[descriptionLabel]-20-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views)
-
-        let vertical1 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-padding-[dateLabel(==labelHeight)]-[descriptionLabel(==labelHeight)]-10-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views)
-
-        let vertical2 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-padding-[temperatureLabel(==labelHeight)]-[descriptionLabel]-padding-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: views)
-
-        var viewConstraints = [NSLayoutConstraint]()
-
-        viewConstraints += horizontal1
-        viewConstraints += horizontal2
-        viewConstraints += vertical1
-        viewConstraints += vertical2
-
-        NSLayoutConstraint.activate(viewConstraints)
-    }
-    
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,6 @@
 		236B5C60211FC66900769D25 /* YAWA_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C5F211FC66900769D25 /* YAWA_DemoTests.swift */; };
 		236B5C6B211FC66900769D25 /* YAWA_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */; };
 		236B5C7B211FC85B00769D25 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C79211FC85B00769D25 /* WeatherTableViewCell.swift */; };
-		236B5C7C211FC85B00769D25 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C7A211FC85B00769D25 /* WeatherTableViewCell.xib */; };
 		236B5C7E211FCDF600769D25 /* WeatherTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C7D211FCDF600769D25 /* WeatherTableViewHeader.swift */; };
 		236B5C80211FCE2300769D25 /* WeatherTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */; };
 		236B5C82211FE46100769D25 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */; };
@@ -40,6 +39,7 @@
 		824718342442AE0B008462AC /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718332442AE0B008462AC /* WeatherWorker.swift */; };
 		824718362442AE23008462AC /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718352442AE23008462AC /* WeatherModels.swift */; };
 		82E0D25A244D9DA8007B63CA /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0D259244D9DA8007B63CA /* WeatherApi.swift */; };
+		A15BBCBE131655287365778B /* Pods_YAWA_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		067ACC89F9C75FC10AE27969 /* Pods-YAWA-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Demo.release.xcconfig"; path = "Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		2329941C212BAEAD003A4A5C /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		236B5C47211FC66800769D25 /* YAWA-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YAWA-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		236B5C4A211FC66800769D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAWA_DemoUITests.swift; sourceTree = "<group>"; };
 		236B5C6C211FC66900769D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236B5C79211FC85B00769D25 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
-		236B5C7A211FC85B00769D25 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		236B5C7D211FCDF600769D25 /* WeatherTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewHeader.swift; sourceTree = "<group>"; };
 		236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewHeader.xib; sourceTree = "<group>"; };
 		236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +99,8 @@
 		824718332442AE0B008462AC /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		824718352442AE23008462AC /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 		82E0D259244D9DA8007B63CA /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
+		ACD4707DE83778BD3D3A509B /* Pods-YAWA-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Demo.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15BBCBE131655287365778B /* Pods_YAWA_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0565147D13B0A4E96BB9CA5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2329941B212BAE94003A4A5C /* Extention */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +154,8 @@
 				236B5C5E211FC66900769D25 /* YAWA-DemoTests */,
 				236B5C69211FC66900769D25 /* YAWA-DemoUITests */,
 				236B5C48211FC66800769D25 /* Products */,
+				26E8D1207585957CD51D9B86 /* Pods */,
+				0565147D13B0A4E96BB9CA5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				236B5C79211FC85B00769D25 /* WeatherTableViewCell.swift */,
-				236B5C7A211FC85B00769D25 /* WeatherTableViewCell.xib */,
 				236B5C7D211FCDF600769D25 /* WeatherTableViewHeader.swift */,
 				236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */,
 				237A7E97212025510017D907 /* DetailPageCell.swift */,
@@ -235,6 +247,15 @@
 			path = DataService;
 			sourceTree = "<group>";
 		};
+		26E8D1207585957CD51D9B86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACD4707DE83778BD3D3A509B /* Pods-YAWA-Demo.debug.xcconfig */,
+				067ACC89F9C75FC10AE27969 /* Pods-YAWA-Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 236B5C6F211FC66900769D25 /* Build configuration list for PBXNativeTarget "YAWA-Demo" */;
 			buildPhases = (
+				AA8690A7FE8FEB7F197DB2BC /* [CP] Check Pods Manifest.lock */,
 				236B5C43211FC66800769D25 /* Sources */,
 				236B5C44211FC66800769D25 /* Frameworks */,
 				236B5C45211FC66800769D25 /* Resources */,
+				8B5EE97AB7E124A4DF8A4366 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,7 +362,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236B5C7C211FC85B00769D25 /* WeatherTableViewCell.xib in Resources */,
 				237A7E9A212025510017D907 /* DetailPageCell.xib in Resources */,
 				236B5C55211FC66900769D25 /* LaunchScreen.storyboard in Resources */,
 				236B5C52211FC66900769D25 /* Assets.xcassets in Resources */,
@@ -363,6 +385,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B5EE97AB7E124A4DF8A4366 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA8690A7FE8FEB7F197DB2BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YAWA-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		236B5C43211FC66800769D25 /* Sources */ = {
@@ -564,6 +628,7 @@
 		};
 		236B5C70211FC66900769D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACD4707DE83778BD3D3A509B /* Pods-YAWA-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +646,7 @@
 		};
 		236B5C71211FC66900769D25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067ACC89F9C75FC10AE27969 /* Pods-YAWA-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

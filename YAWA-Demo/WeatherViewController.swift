@@ -56,8 +56,8 @@ class WeatherViewController: UIViewController {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         tableView.separatorColor = UIColor.gray
         
-        let nib = UINib.init(nibName: "WeatherTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: kWeatherTableViewCellReuseIdentifier)
+//        let nib = UINib.init(nibName: "WeatherTableViewCell", bundle: nil)
+//        self.tableView.register(nib, forCellReuseIdentifier: kWeatherTableViewCellReuseIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
