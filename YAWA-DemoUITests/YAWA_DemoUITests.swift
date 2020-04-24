@@ -35,8 +35,42 @@ class YAWA_DemoUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testPageHasCorrectTitle() {
+        app.launch()
+        
+        let navigationBar = app.navigationBars.staticTexts["WEATHER"]
+        
+        XCTAssertTrue(navigationBar.exists, "Title is not correct.") //check navigation bar title
+    }
+    
     func testFetchButtonExists() {
         app.launch()
-        XCTAssertTrue(app.buttons["fetch"].exists)
+        
+        let button = app.buttons["fetch"]
+        
+        XCTAssertTrue(button.exists, "Button does not exist.")
+    }
+    
+    func testTextFieldExists() {
+        app.launch()
+        
+        let textField = app.textFields["city name.."] // find text filed according to place holder
+        
+        XCTAssertTrue(textField.exists, "Text field does not exist.")
+    }
+    
+    func testTextFieldTypeCorrectText() {
+        app.launch()
+        
+        var textField = app.textFields["city name.."]
+        textField.tap()
+        textField.typeText("auckland")
+        textField = app.textFields["auckland"] // find text filed according to value
+        
+        XCTAssertEqual(textField.value as! String, "auckland", "Text field value is not correct.")
+    }
+    
+    func testButtonTap() {
+        app.launch()
     }
 }
