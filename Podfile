@@ -7,6 +7,23 @@ use_frameworks!
 
 target 'YAWA-Demo' do
   pod 'SnapKit'
+  
+  pod 'OHHTTPStubs/Swift', '~> 6.1.0'
+  pod 'OHHTTPStubs', '~> 6.1.0'
+end
+
+target 'YAWA-DemoTests' do
+  pod 'SnapKit'
+  
+  pod 'OHHTTPStubs/Swift', '~> 6.1.0'
+  pod 'OHHTTPStubs', '~> 6.1.0'
+end
+
+target 'YAWA-DemoUITests' do
+  pod 'SnapKit'
+  
+  pod 'OHHTTPStubs/Swift', '~> 6.1.0'
+  pod 'OHHTTPStubs', '~> 6.1.0'
 end
 
 post_install do |installer|
