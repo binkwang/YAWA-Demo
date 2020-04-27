@@ -19,12 +19,13 @@ class RemoteDataService {
         
         do {
             let request = try WeatherApi.getWeather(city: cityName).request()
+            print("request host---------------: \(String(describing: request.url?.host))")
             
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
                 completion(data, response, error)
-            })
-            dataTask.resume()
+            }).resume()
+            
         } catch {
             completion(nil, nil, error)
         }

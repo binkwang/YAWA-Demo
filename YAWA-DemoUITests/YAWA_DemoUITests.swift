@@ -86,22 +86,42 @@ class YAWA_DemoUITests: XCTestCase {
 //        XCTAssertTrue(button.exists, "Button does not exist.")
 //        button.tap() // failed with multi-match
         
-        // TODO: Stub not triggered
+        // TODO: Cannot stub network reqeust making from main applicaiton
+        // https://github.com/AliSoftware/OHHTTPStubs/issues/124
         let jsonResponse = getJSON(from: "weather")
-        stub(condition: isHost("api.openweathermap.org")) { _ in
+        stub(condition: isScheme("http") && isHost("api.openweathermap.org")) { _ in
             return OHHTTPStubsResponse(jsonObject: jsonResponse, statusCode: 200, headers: nil)
         }
         
-        let accordianButtonsQuery = self.app.buttons.matching(identifier: "fetch")
-        if accordianButtonsQuery.count > 0 {
-            let firstButton = accordianButtonsQuery.element(boundBy: 0)
+        let buttonsQuery = app.buttons.matching(identifier: "fetch")
+        if buttonsQuery.count > 0 {
+            let firstButton = buttonsQuery.element(boundBy: 0)
             firstButton.tap()
             
-            let weatherLabel = app.staticTexts["overcast clouds"] // "sky is clear"
+            let weatherLabel = app.staticTexts["description: scattered clouds"] // "sky is clear", "overcast clouds"
             
-            // TOD: Failed to find "overcast clouds" StaticText after 5 seconds.
             waitForElementToAppear(element: weatherLabel)
         }
+    }
+    
+    func testSessionDataTaskCanBeStubbedByOHHTTPStubs() {
+        app.launch()
+        
+        let tempExpectation = expectation(description: "temporary expectation")
+        
+        let jsonResponse = getJSON(from: "weather")
+        stub(condition: isHost("a_random_host")) { _ in
+            return OHHTTPStubsResponse(jsonObject: jsonResponse, statusCode: 200, headers: nil)
+        }
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        session.dataTask(with: URL(string: "https://a_random_host/login")!) { (data, response, error) in
+            print("data------------: \(String(describing: data))")
+            
+            tempExpectation.fulfill()
+        }.resume()
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
 }
 
