@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "264586D6-011C-4F18-B096-BE316A6DCA5E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YAWA-Demo/DataService/RemoteDataService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchWeathers(cityName:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "85ABEA3E-B4B7-42F2-8936-4FFBDDFBB133"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -114,6 +98,38 @@
             endingLineNumber = "92"
             landmarkName = "testButtonTap()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85ABEA3E-B4B7-42F2-8936-4FFBDDFBB133 - d2507805f435a1f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YAWA_DemoUITests.YAWA_DemoUITests.testButtonTap() -&gt; ()"
+                  moduleName = "YAWA-DemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bink.wang/YAWA-Demo/YAWA-DemoUITests/YAWA_DemoUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1427">
+               </Location>
+               <Location
+                  uuid = "85ABEA3E-B4B7-42F2-8936-4FFBDDFBB133 - 1c3bd74523162a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.URLRequest) -&gt; __C.OHHTTPStubsResponse in YAWA_DemoUITests.YAWA_DemoUITests.testButtonTap() -&gt; ()"
+                  moduleName = "YAWA-DemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bink.wang/YAWA-Demo/YAWA-DemoUITests/YAWA_DemoUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

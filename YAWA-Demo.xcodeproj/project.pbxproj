@@ -42,9 +42,9 @@
 		82BC28C62455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82BC28C72455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82E0D25A244D9DA8007B63CA /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0D259244D9DA8007B63CA /* WeatherApi.swift */; };
-		A15BBCBE131655287365778B /* Pods_YAWA_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */; };
-		E1A0A29E8A028708D9B7E56B /* Pods_YAWA_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558EE1786DDA927032AFC04F /* Pods_YAWA_DemoTests.framework */; };
-		EE26DA418BB51567A9004FBC /* Pods_YAWA_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B424A26606B5042C764F39AD /* Pods_YAWA_DemoUITests.framework */; };
+		9AC8F39F80C1680096881295 /* Pods_YAWA_Tests_YAWA_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993F3F7485E933BDFE5CC9D8 /* Pods_YAWA_Tests_YAWA_DemoTests.framework */; };
+		B919F2BB4E76F16955B55136 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014B025447A7A53B59F88BC5 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework */; };
+		E49285DF013173A1248F97B2 /* Pods_YAWA_YAWA_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A24022A3159DE29BE03EF43 /* Pods_YAWA_YAWA_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014B025447A7A53B59F88BC5 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_Tests_YAWA_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		067ACC89F9C75FC10AE27969 /* Pods-YAWA-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Demo.release.xcconfig"; path = "Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		2329941C212BAEAD003A4A5C /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		236B5C47211FC66800769D25 /* YAWA-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YAWA-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +99,12 @@
 		2395814D213A9282009290FE /* WeatherDetailViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherDetailViewController+UITableView.swift"; sourceTree = "<group>"; };
 		239EA6FE2160589200A12A52 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		23EE2214213FDFE000057BC1 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		558EE1786DDA927032AFC04F /* Pods_YAWA_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		256448CF0A75A70B0669C5B3 /* Pods-YAWA-YAWA-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoUITests/Pods-YAWA-YAWA-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4AF3889A4F44F4C1FF073F8E /* Pods-YAWA-Tests-YAWA-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Tests-YAWA-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-Tests-YAWA-DemoTests/Pods-YAWA-Tests-YAWA-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D7AE9815FBB1FF3BB48290F /* Pods-YAWA-YAWA-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-Demo.release.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		52CC6EA89017DF16BA488585 /* Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-Demo-YAWA-DemoUITests/Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1B891689F9FD758FAAB94C /* Pods-YAWA-YAWA-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoTests/Pods-YAWA-YAWA-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F241A369BA213103DED576D /* Pods-YAWA-YAWA-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-Demo.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		73E7685D45AB93E20C9460A6 /* Pods-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-DemoUITests/Pods-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8247182D2442ADA2008462AC /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
 		8247182F2442ADBF008462AC /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
@@ -107,12 +113,18 @@
 		824718352442AE23008462AC /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 		82BC28C42455AE2400B5ECA4 /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
 		82E0D259244D9DA8007B63CA /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
+		8449EDD62D8831994AF4B6A4 /* Pods-YAWA-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoUITests/Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8992B49A1D17B9C871AC48A3 /* Pods-YAWA-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-DemoTests/Pods-YAWA-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A24022A3159DE29BE03EF43 /* Pods_YAWA_YAWA_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_YAWA_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E91709AB95406EE0B453310 /* Pods-YAWA-Tests-YAWA-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Tests-YAWA-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-Tests-YAWA-DemoTests/Pods-YAWA-Tests-YAWA-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9542AEE6E4E3DFFC6A23EF09 /* Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		993F3F7485E933BDFE5CC9D8 /* Pods_YAWA_Tests_YAWA_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_Tests_YAWA_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD4707DE83778BD3D3A509B /* Pods-YAWA-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Demo.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		B424A26606B5042C764F39AD /* Pods_YAWA_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDFC104F9CE4D9DE6DDA432 /* Pods-YAWA-YAWA-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoTests/Pods-YAWA-YAWA-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2CFC9F511125CEA7E3DB1E8 /* Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-Demo-YAWA-DemoUITests/Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6926FE69E4C7C9AC8C4ADE2 /* Pods-YAWA-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-DemoTests/Pods-YAWA-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF58E995B63C9F98BBF20354 /* Pods-YAWA-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-YAWA-DemoUITests/Pods-YAWA-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAWA_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB27048B9EEACC140174C3BF /* Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15BBCBE131655287365778B /* Pods_YAWA_Demo.framework in Frameworks */,
+				E49285DF013173A1248F97B2 /* Pods_YAWA_YAWA_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A0A29E8A028708D9B7E56B /* Pods_YAWA_DemoTests.framework in Frameworks */,
+				9AC8F39F80C1680096881295 /* Pods_YAWA_Tests_YAWA_DemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE26DA418BB51567A9004FBC /* Pods_YAWA_DemoUITests.framework in Frameworks */,
+				B919F2BB4E76F16955B55136 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +158,9 @@
 		0565147D13B0A4E96BB9CA5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF79AECE67935E4EA2D6B7CA /* Pods_YAWA_Demo.framework */,
-				558EE1786DDA927032AFC04F /* Pods_YAWA_DemoTests.framework */,
-				B424A26606B5042C764F39AD /* Pods_YAWA_DemoUITests.framework */,
+				8A24022A3159DE29BE03EF43 /* Pods_YAWA_YAWA_Demo.framework */,
+				993F3F7485E933BDFE5CC9D8 /* Pods_YAWA_Tests_YAWA_DemoTests.framework */,
+				014B025447A7A53B59F88BC5 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,6 +285,18 @@
 				8992B49A1D17B9C871AC48A3 /* Pods-YAWA-DemoTests.release.xcconfig */,
 				73E7685D45AB93E20C9460A6 /* Pods-YAWA-DemoUITests.debug.xcconfig */,
 				CF58E995B63C9F98BBF20354 /* Pods-YAWA-DemoUITests.release.xcconfig */,
+				6F241A369BA213103DED576D /* Pods-YAWA-YAWA-Demo.debug.xcconfig */,
+				4D7AE9815FBB1FF3BB48290F /* Pods-YAWA-YAWA-Demo.release.xcconfig */,
+				5B1B891689F9FD758FAAB94C /* Pods-YAWA-YAWA-DemoTests.debug.xcconfig */,
+				AEDFC104F9CE4D9DE6DDA432 /* Pods-YAWA-YAWA-DemoTests.release.xcconfig */,
+				8449EDD62D8831994AF4B6A4 /* Pods-YAWA-YAWA-DemoUITests.debug.xcconfig */,
+				256448CF0A75A70B0669C5B3 /* Pods-YAWA-YAWA-DemoUITests.release.xcconfig */,
+				8E91709AB95406EE0B453310 /* Pods-YAWA-Tests-YAWA-DemoTests.debug.xcconfig */,
+				4AF3889A4F44F4C1FF073F8E /* Pods-YAWA-Tests-YAWA-DemoTests.release.xcconfig */,
+				FB27048B9EEACC140174C3BF /* Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig */,
+				9542AEE6E4E3DFFC6A23EF09 /* Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig */,
+				52CC6EA89017DF16BA488585 /* Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.debug.xcconfig */,
+				C2CFC9F511125CEA7E3DB1E8 /* Pods-YAWA-YAWA-Demo-YAWA-DemoUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -315,7 +339,7 @@
 				236B5C57211FC66900769D25 /* Sources */,
 				236B5C58211FC66900769D25 /* Frameworks */,
 				236B5C59211FC66900769D25 /* Resources */,
-				B10DDA1792A169E88E023238 /* [CP] Embed Pods Frameworks */,
+				94F40C7678BFD1BDB29D6A67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,7 +359,7 @@
 				236B5C62211FC66900769D25 /* Sources */,
 				236B5C63211FC66900769D25 /* Frameworks */,
 				236B5C64211FC66900769D25 /* Resources */,
-				8770348504E1BEE405FD6369 /* [CP] Embed Pods Frameworks */,
+				713BF7D4E66D0F4419197A2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,7 +462,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YAWA-DemoTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-YAWA-Tests-YAWA-DemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -460,28 +484,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YAWA-DemoUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-YAWA-Tests-YAWA-DemoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8770348504E1BEE405FD6369 /* [CP] Embed Pods Frameworks */ = {
+		713BF7D4E66D0F4419197A2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoUITests/Pods-YAWA-DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoUITests/Pods-YAWA-DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoUITests/Pods-YAWA-DemoUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B5EE97AB7E124A4DF8A4366 /* [CP] Embed Pods Frameworks */ = {
@@ -490,15 +514,32 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-Demo/Pods-YAWA-Demo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94F40C7678BFD1BDB29D6A67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoTests/Pods-YAWA-Tests-YAWA-DemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoTests/Pods-YAWA-Tests-YAWA-DemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoTests/Pods-YAWA-Tests-YAWA-DemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA8690A7FE8FEB7F197DB2BC /* [CP] Check Pods Manifest.lock */ = {
@@ -516,28 +557,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YAWA-Demo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-YAWA-YAWA-Demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B10DDA1792A169E88E023238 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoTests/Pods-YAWA-DemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoTests/Pods-YAWA-DemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-DemoTests/Pods-YAWA-DemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -742,7 +766,7 @@
 		};
 		236B5C70211FC66900769D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACD4707DE83778BD3D3A509B /* Pods-YAWA-Demo.debug.xcconfig */;
+			baseConfigurationReference = 6F241A369BA213103DED576D /* Pods-YAWA-YAWA-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -761,7 +785,7 @@
 		};
 		236B5C71211FC66900769D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 067ACC89F9C75FC10AE27969 /* Pods-YAWA-Demo.release.xcconfig */;
+			baseConfigurationReference = 4D7AE9815FBB1FF3BB48290F /* Pods-YAWA-YAWA-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -779,7 +803,7 @@
 		};
 		236B5C73211FC66900769D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6926FE69E4C7C9AC8C4ADE2 /* Pods-YAWA-DemoTests.debug.xcconfig */;
+			baseConfigurationReference = 8E91709AB95406EE0B453310 /* Pods-YAWA-Tests-YAWA-DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -801,7 +825,7 @@
 		};
 		236B5C74211FC66900769D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8992B49A1D17B9C871AC48A3 /* Pods-YAWA-DemoTests.release.xcconfig */;
+			baseConfigurationReference = 4AF3889A4F44F4C1FF073F8E /* Pods-YAWA-Tests-YAWA-DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -822,7 +846,7 @@
 		};
 		236B5C76211FC66900769D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73E7685D45AB93E20C9460A6 /* Pods-YAWA-DemoUITests.debug.xcconfig */;
+			baseConfigurationReference = FB27048B9EEACC140174C3BF /* Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -843,7 +867,7 @@
 		};
 		236B5C77211FC66900769D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF58E995B63C9F98BBF20354 /* Pods-YAWA-DemoUITests.release.xcconfig */;
+			baseConfigurationReference = 9542AEE6E4E3DFFC6A23EF09 /* Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
