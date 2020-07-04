@@ -38,6 +38,7 @@
 		824718322442ADF8008462AC /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718312442ADF8008462AC /* WeatherRouter.swift */; };
 		824718342442AE0B008462AC /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718332442AE0B008462AC /* WeatherWorker.swift */; };
 		824718362442AE23008462AC /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718352442AE23008462AC /* WeatherModels.swift */; };
+		826B8B4A24B0607A0017B2D5 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B8B4924B0607A0017B2D5 /* EarlGrey.swift */; };
 		82BC28C52455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82BC28C62455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82BC28C72455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
@@ -111,6 +112,8 @@
 		824718312442ADF8008462AC /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
 		824718332442AE0B008462AC /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		824718352442AE23008462AC /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
+		826B8B4924B0607A0017B2D5 /* EarlGrey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		826B8B4B24B060ED0017B2D5 /* UITests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITests-BridgingHeader.h"; sourceTree = "<group>"; };
 		82BC28C42455AE2400B5ECA4 /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
 		82E0D259244D9DA8007B63CA /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		8449EDD62D8831994AF4B6A4 /* Pods-YAWA-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoUITests/Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -236,8 +239,10 @@
 		236B5C69211FC66900769D25 /* YAWA-DemoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				826B8B4924B0607A0017B2D5 /* EarlGrey.swift */,
 				236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */,
 				236B5C6C211FC66900769D25 /* Info.plist */,
+				826B8B4B24B060ED0017B2D5 /* UITests-BridgingHeader.h */,
 			);
 			path = "YAWA-DemoUITests";
 			sourceTree = "<group>";
@@ -611,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826B8B4A24B0607A0017B2D5 /* EarlGrey.swift in Sources */,
 				236B5C6B211FC66900769D25 /* YAWA_DemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,8 +863,24 @@
 					"@loader_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"EarlGreyTest\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OHHTTPStubs\"",
+					"-framework",
+					"\"XCTest\"",
+					"-framework",
+					"\"eDistantObject\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.binkwang.YAWA-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YAWA-DemoUITests/UITests-BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "YAWA-Demo";
@@ -877,8 +899,24 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"EarlGreyTest\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OHHTTPStubs\"",
+					"-framework",
+					"\"XCTest\"",
+					"-framework",
+					"\"eDistantObject\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.binkwang.YAWA-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YAWA-DemoUITests/UITests-BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "YAWA-Demo";

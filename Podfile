@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 use_frameworks!
 inhibit_all_warnings! # ignore all warnings from all pods
@@ -10,6 +10,7 @@ abstract_target 'YAWA' do
   target 'YAWA-Demo' do
     # inherit! :complete # The target inherits all behaviour from the parent. (by default if you do not specify any inherit!)
     pod 'SnapKit'
+    pod 'EarlGreyApp'
   end
   
   abstract_target 'Tests' do
@@ -17,7 +18,11 @@ abstract_target 'YAWA' do
     pod 'OHHTTPStubs', '~> 6.1.0'
 
     target 'YAWA-DemoTests'
-    target 'YAWA-DemoUITests'
+    
+    target 'YAWA-DemoUITests' do
+      pod 'EarlGreyTest'
+      pod 'eDistantObject', '0.9.0'
+    end
   end
   
 end

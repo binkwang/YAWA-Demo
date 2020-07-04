@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework
+${BUILT_PRODUCTS_DIR}/EarlGreyTest/EarlGreyTest.framework
+${BUILT_PRODUCTS_DIR}/eDistantObject/eDistantObject.framework

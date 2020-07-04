@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-YAWA-YAWA-Demo/Pods-YAWA-YAWA-Demo-frameworks.sh
+${PODS_ROOT}/EarlGreyApp/AppFramework.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

@@ -198,9 +198,13 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/EarlGreyTest/EarlGreyTest.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/eDistantObject/eDistantObject.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/EarlGreyTest/EarlGreyTest.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/eDistantObject/eDistantObject.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
