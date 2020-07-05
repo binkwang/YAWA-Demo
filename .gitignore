@@ -1,0 +1,18 @@
+## OS generated files
+.DS_Store
+.DS_Store?
+
+## Cocoapods
+Pods/
+
+## User settings
+xcuserdata/
+
+## Temporary folders
+build/
+DerivedData/
+TestResults/
+xcodebuild.log
+*.dSYM*
+
+
