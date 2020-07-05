@@ -1,6 +1,0 @@
-framework module Pods_YAWA_Tests_YAWA_DemoTests {
-  umbrella header "Pods-YAWA-Tests-YAWA-DemoTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
