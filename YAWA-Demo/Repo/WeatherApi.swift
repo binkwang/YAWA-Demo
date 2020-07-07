@@ -22,7 +22,6 @@ enum WeatherApi {
     }
     
     /***************
-     *
      * Example:
      * http://api.openweathermap.org/data/2.5/forecast/daily?q=auckland&mode=json&units=metric&cnt=7&appid=542ffd081e67f4512b705f89d2a611b2
      * http://openweathermap.org/img/w/10d.png

@@ -9,11 +9,12 @@
 import Foundation
 
 class WeatherWorker {
-    
-    var service: RemoteDataService
+    let weatherRepo: WeatherRepo
 
     init() {
-        service = RemoteDataService.shared
+        let cache = TheWeatherCache()
+        let web = WebWeatherRepo()
+        weatherRepo = WeatherRepoCacheDecorator(inner: web, cache: cache)
     }
     
     func fetchWeathers(cityName: String?,
@@ -24,7 +25,7 @@ class WeatherWorker {
         
         requestStart()
         
-        service.fetchWeathers(cityName: cityName) { (data, response, error) in
+        weatherRepo.fetchWeathers(cityName: cityName) { (data, _, error) in
             requestEnd()
             
             if let data = data {
