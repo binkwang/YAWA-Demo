@@ -10,7 +10,10 @@ abstract_target 'YAWA' do
   target 'YAWA-Demo' do
     # inherit! :complete # The target inherits all behaviour from the parent. (by default if you do not specify any inherit!)
     pod 'SnapKit'
-    pod 'EarlGreyApp'
+    
+    # TODO: fix error when introduce EarlGreyApp
+    # Fatal failure: EarlGrey's app component has been launched without edoPort assigned. You are probably running the application under test by itself, which does not work since the embedded EarlGrey component needs its test counterpart present.
+    # pod 'EarlGreyApp'
   end
   
   abstract_target 'Tests' do
@@ -20,8 +23,8 @@ abstract_target 'YAWA' do
     target 'YAWA-DemoTests'
     
     target 'YAWA-DemoUITests' do
-      pod 'EarlGreyTest'
-      pod 'eDistantObject', '0.9.0'
+      # pod 'EarlGreyTest'
+      # pod 'eDistantObject', '0.9.0'
     end
   end
   

@@ -1,8 +1,4 @@
 PODS:
-  - EarlGreyApp (2.0.0)
-  - EarlGreyTest (2.0.0):
-    - eDistantObject
-  - eDistantObject (0.9.0)
   - OHHTTPStubs (6.1.0):
     - OHHTTPStubs/Default (= 6.1.0)
   - OHHTTPStubs/Core (6.1.0)
@@ -21,28 +17,19 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - EarlGreyApp
-  - EarlGreyTest
-  - eDistantObject (= 0.9.0)
   - OHHTTPStubs (~> 6.1.0)
   - OHHTTPStubs/Swift (~> 6.1.0)
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - EarlGreyApp
-    - EarlGreyTest
-    - eDistantObject
     - OHHTTPStubs
     - SnapKit
 
 SPEC CHECKSUMS:
-  EarlGreyApp: e189faf4f55a190ebc4e1c3b2c1d155c2cd2c946
-  EarlGreyTest: fe152c2dd32607996f518eb097223b16c94a1806
-  eDistantObject: 53a19cc9247f8351836a115c6f05308775dd878d
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 49d17b14df2d719768328447abdc956fc31dda6d
+PODFILE CHECKSUM: 99780a336507d3a023150643c8298d98e80c25ff
 
 COCOAPODS: 1.9.1

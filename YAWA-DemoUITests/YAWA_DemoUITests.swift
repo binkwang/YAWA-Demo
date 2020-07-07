@@ -33,9 +33,9 @@ class YAWA_DemoUITests: XCTestCase {
     func testExample() {
         app.launch()
 
-        EarlGrey
-        .selectElement(with: grey_keyWindow())
-        .perform(grey_tap())
+//        EarlGrey
+//        .selectElement(with: grey_keyWindow())
+//        .perform(grey_tap())
     }
     
     func testPageHasCorrectTitle() {
