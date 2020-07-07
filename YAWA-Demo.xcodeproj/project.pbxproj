@@ -14,17 +14,11 @@
 		236B5C52211FC66900769D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C51211FC66900769D25 /* Assets.xcassets */; };
 		236B5C55211FC66900769D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C53211FC66900769D25 /* LaunchScreen.storyboard */; };
 		236B5C60211FC66900769D25 /* YAWA_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C5F211FC66900769D25 /* YAWA_DemoTests.swift */; };
-		236B5C6B211FC66900769D25 /* YAWA_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */; };
 		236B5C7B211FC85B00769D25 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C79211FC85B00769D25 /* WeatherTableViewCell.swift */; };
 		236B5C7E211FCDF600769D25 /* WeatherTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C7D211FCDF600769D25 /* WeatherTableViewHeader.swift */; };
 		236B5C80211FCE2300769D25 /* WeatherTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */; };
 		236B5C82211FE46100769D25 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */; };
-		236B5C85211FEE3900769D25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C84211FEE3900769D25 /* Weather.swift */; };
 		236B5C8B211FF6EC00769D25 /* WeatherRepoWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B5C8A211FF6EC00769D25 /* WeatherRepoWeb.swift */; };
-		237A7E8F212006EE0017D907 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E8E212006EE0017D907 /* City.swift */; };
-		237A7E9121200AF80017D907 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E9021200AF80017D907 /* Temp.swift */; };
-		237A7E9321200BCC0017D907 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E9221200BCC0017D907 /* WeatherCondition.swift */; };
-		237A7E95212010040017D907 /* CityWeathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E94212010040017D907 /* CityWeathers.swift */; };
 		237A7E99212025510017D907 /* DetailPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E97212025510017D907 /* DetailPageCell.swift */; };
 		237A7E9A212025510017D907 /* DetailPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237A7E98212025510017D907 /* DetailPageCell.xib */; };
 		237A7E9C212044110017D907 /* InvalidAPIKeyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237A7E9B212044110017D907 /* InvalidAPIKeyError.swift */; };
@@ -38,30 +32,23 @@
 		820251B524B40FB200ABEC08 /* WeatherRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251B424B40FB200ABEC08 /* WeatherRepo.swift */; };
 		820251B724B4110600ABEC08 /* WeatherRepoDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251B624B4110600ABEC08 /* WeatherRepoDecorator.swift */; };
 		820251B924B411AF00ABEC08 /* WeatherRepoCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251B824B411AF00ABEC08 /* WeatherRepoCacheDecorator.swift */; };
+		820251BC24B4318000ABEC08 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251BB24B4318000ABEC08 /* WeatherResponse.swift */; };
+		820251BE24B4363200ABEC08 /* WeatherWorkerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251BD24B4363200ABEC08 /* WeatherWorkerTest.swift */; };
+		820251C024B43A2B00ABEC08 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820251BF24B43A2B00ABEC08 /* TestHelper.swift */; };
 		8247182E2442ADA2008462AC /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8247182D2442ADA2008462AC /* WeatherInteractor.swift */; };
 		824718302442ADBF008462AC /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8247182F2442ADBF008462AC /* WeatherPresenter.swift */; };
 		824718322442ADF8008462AC /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718312442ADF8008462AC /* WeatherRouter.swift */; };
 		824718342442AE0B008462AC /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718332442AE0B008462AC /* WeatherWorker.swift */; };
 		824718362442AE23008462AC /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824718352442AE23008462AC /* WeatherModels.swift */; };
-		826B8B4A24B0607A0017B2D5 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826B8B4924B0607A0017B2D5 /* EarlGrey.swift */; };
 		82BC28C52455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82BC28C62455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
-		82BC28C72455AE2400B5ECA4 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 82BC28C42455AE2400B5ECA4 /* weather.json */; };
 		82E0D25A244D9DA8007B63CA /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0D259244D9DA8007B63CA /* WeatherApi.swift */; };
 		9AC8F39F80C1680096881295 /* Pods_YAWA_Tests_YAWA_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993F3F7485E933BDFE5CC9D8 /* Pods_YAWA_Tests_YAWA_DemoTests.framework */; };
-		B919F2BB4E76F16955B55136 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014B025447A7A53B59F88BC5 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework */; };
 		E49285DF013173A1248F97B2 /* Pods_YAWA_YAWA_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A24022A3159DE29BE03EF43 /* Pods_YAWA_YAWA_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		236B5C5C211FC66900769D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 236B5C3F211FC66800769D25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 236B5C46211FC66800769D25;
-			remoteInfo = "YAWA-Demo";
-		};
-		236B5C67211FC66900769D25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 236B5C3F211FC66800769D25 /* Project object */;
 			proxyType = 1;
@@ -84,19 +71,11 @@
 		236B5C5B211FC66900769D25 /* YAWA-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YAWA-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		236B5C5F211FC66900769D25 /* YAWA_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAWA_DemoTests.swift; sourceTree = "<group>"; };
 		236B5C61211FC66900769D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		236B5C66211FC66900769D25 /* YAWA-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YAWA-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAWA_DemoUITests.swift; sourceTree = "<group>"; };
-		236B5C6C211FC66900769D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236B5C79211FC85B00769D25 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		236B5C7D211FCDF600769D25 /* WeatherTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewHeader.swift; sourceTree = "<group>"; };
 		236B5C7F211FCE2300769D25 /* WeatherTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewHeader.xib; sourceTree = "<group>"; };
 		236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
-		236B5C84211FEE3900769D25 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		236B5C8A211FF6EC00769D25 /* WeatherRepoWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepoWeb.swift; sourceTree = "<group>"; };
-		237A7E8E212006EE0017D907 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		237A7E9021200AF80017D907 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
-		237A7E9221200BCC0017D907 /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
-		237A7E94212010040017D907 /* CityWeathers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeathers.swift; sourceTree = "<group>"; };
 		237A7E97212025510017D907 /* DetailPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageCell.swift; sourceTree = "<group>"; };
 		237A7E98212025510017D907 /* DetailPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPageCell.xib; sourceTree = "<group>"; };
 		237A7E9B212044110017D907 /* InvalidAPIKeyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidAPIKeyError.swift; sourceTree = "<group>"; };
@@ -117,13 +96,14 @@
 		820251B424B40FB200ABEC08 /* WeatherRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepo.swift; sourceTree = "<group>"; };
 		820251B624B4110600ABEC08 /* WeatherRepoDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepoDecorator.swift; sourceTree = "<group>"; };
 		820251B824B411AF00ABEC08 /* WeatherRepoCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepoCacheDecorator.swift; sourceTree = "<group>"; };
+		820251BB24B4318000ABEC08 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		820251BD24B4363200ABEC08 /* WeatherWorkerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorkerTest.swift; sourceTree = "<group>"; };
+		820251BF24B43A2B00ABEC08 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		8247182D2442ADA2008462AC /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
 		8247182F2442ADBF008462AC /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		824718312442ADF8008462AC /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
 		824718332442AE0B008462AC /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		824718352442AE23008462AC /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
-		826B8B4924B0607A0017B2D5 /* EarlGrey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
-		826B8B4B24B060ED0017B2D5 /* UITests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITests-BridgingHeader.h"; sourceTree = "<group>"; };
 		82BC28C42455AE2400B5ECA4 /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
 		82E0D259244D9DA8007B63CA /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		8449EDD62D8831994AF4B6A4 /* Pods-YAWA-YAWA-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-YAWA-YAWA-DemoUITests/Pods-YAWA-YAWA-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,14 +137,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236B5C63211FC66900769D25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B919F2BB4E76F16955B55136 /* Pods_YAWA_Tests_YAWA_DemoUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,7 +165,6 @@
 			children = (
 				236B5C49211FC66800769D25 /* YAWA-Demo */,
 				236B5C5E211FC66900769D25 /* YAWA-DemoTests */,
-				236B5C69211FC66900769D25 /* YAWA-DemoUITests */,
 				236B5C48211FC66800769D25 /* Products */,
 				26E8D1207585957CD51D9B86 /* Pods */,
 				0565147D13B0A4E96BB9CA5D /* Frameworks */,
@@ -205,7 +176,6 @@
 			children = (
 				236B5C47211FC66800769D25 /* YAWA-Demo.app */,
 				236B5C5B211FC66900769D25 /* YAWA-DemoTests.xctest */,
-				236B5C66211FC66900769D25 /* YAWA-DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,7 +196,6 @@
 				8247182F2442ADBF008462AC /* WeatherPresenter.swift */,
 				824718312442ADF8008462AC /* WeatherRouter.swift */,
 				824718332442AE0B008462AC /* WeatherWorker.swift */,
-				824718352442AE23008462AC /* WeatherModels.swift */,
 				2395814B213A923C009290FE /* WeatherViewController+UITableViewDelegate.swift */,
 				236B5C81211FE46100769D25 /* WeatherDetailViewController.swift */,
 				2395814D213A9282009290FE /* WeatherDetailViewController+UITableView.swift */,
@@ -244,19 +213,10 @@
 				236B5C5F211FC66900769D25 /* YAWA_DemoTests.swift */,
 				236B5C61211FC66900769D25 /* Info.plist */,
 				239EA6FE2160589200A12A52 /* ViewControllerTests.swift */,
+				820251BD24B4363200ABEC08 /* WeatherWorkerTest.swift */,
+				820251BF24B43A2B00ABEC08 /* TestHelper.swift */,
 			);
 			path = "YAWA-DemoTests";
-			sourceTree = "<group>";
-		};
-		236B5C69211FC66900769D25 /* YAWA-DemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				826B8B4924B0607A0017B2D5 /* EarlGrey.swift */,
-				236B5C6A211FC66900769D25 /* YAWA_DemoUITests.swift */,
-				236B5C6C211FC66900769D25 /* Info.plist */,
-				826B8B4B24B060ED0017B2D5 /* UITests-BridgingHeader.h */,
-			);
-			path = "YAWA-DemoUITests";
 			sourceTree = "<group>";
 		};
 		236B5C78211FC81400769D25 /* UI */ = {
@@ -274,12 +234,9 @@
 		236B5C83211FEE2600769D25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				237A7E94212010040017D907 /* CityWeathers.swift */,
-				237A7E8E212006EE0017D907 /* City.swift */,
-				237A7E9221200BCC0017D907 /* WeatherCondition.swift */,
-				236B5C84211FEE3900769D25 /* Weather.swift */,
-				237A7E9021200AF80017D907 /* Temp.swift */,
 				237A7E9B212044110017D907 /* InvalidAPIKeyError.swift */,
+				820251BB24B4318000ABEC08 /* WeatherResponse.swift */,
+				824718352442AE23008462AC /* WeatherModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,26 +344,6 @@
 			productReference = 236B5C5B211FC66900769D25 /* YAWA-DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		236B5C65211FC66900769D25 /* YAWA-DemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 236B5C75211FC66900769D25 /* Build configuration list for PBXNativeTarget "YAWA-DemoUITests" */;
-			buildPhases = (
-				6EBD1916A0ACA42A7E70F9DB /* [CP] Check Pods Manifest.lock */,
-				236B5C62211FC66900769D25 /* Sources */,
-				236B5C63211FC66900769D25 /* Frameworks */,
-				236B5C64211FC66900769D25 /* Resources */,
-				713BF7D4E66D0F4419197A2C /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				236B5C68211FC66900769D25 /* PBXTargetDependency */,
-			);
-			name = "YAWA-DemoUITests";
-			productName = "YAWA-DemoUITests";
-			productReference = 236B5C66211FC66900769D25 /* YAWA-DemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -421,10 +358,6 @@
 						CreatedOnToolsVersion = 9.4;
 					};
 					236B5C5A211FC66900769D25 = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 236B5C46211FC66800769D25;
-					};
-					236B5C65211FC66900769D25 = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = 236B5C46211FC66800769D25;
 					};
@@ -445,7 +378,6 @@
 			targets = (
 				236B5C46211FC66800769D25 /* YAWA-Demo */,
 				236B5C5A211FC66900769D25 /* YAWA-DemoTests */,
-				236B5C65211FC66900769D25 /* YAWA-DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -472,14 +404,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236B5C64211FC66900769D25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82BC28C72455AE2400B5ECA4 /* weather.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -503,45 +427,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6EBD1916A0ACA42A7E70F9DB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YAWA-Tests-YAWA-DemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		713BF7D4E66D0F4419197A2C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAWA-Tests-YAWA-DemoUITests/Pods-YAWA-Tests-YAWA-DemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B5EE97AB7E124A4DF8A4366 /* [CP] Embed Pods Frameworks */ = {
@@ -608,7 +493,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				236B5C8B211FF6EC00769D25 /* WeatherRepoWeb.swift in Sources */,
-				237A7E95212010040017D907 /* CityWeathers.swift in Sources */,
 				2395814E213A9282009290FE /* WeatherDetailViewController+UITableView.swift in Sources */,
 				2329941D212BAEAD003A4A5C /* UIViewController+.swift in Sources */,
 				824718342442AE0B008462AC /* WeatherWorker.swift in Sources */,
@@ -618,18 +502,15 @@
 				23EE2215213FDFE000057BC1 /* Date+.swift in Sources */,
 				820251B524B40FB200ABEC08 /* WeatherRepo.swift in Sources */,
 				2395814A213A8E03009290FE /* UIImageView+.swift in Sources */,
-				237A7E8F212006EE0017D907 /* City.swift in Sources */,
 				236B5C4D211FC66800769D25 /* WeatherViewController.swift in Sources */,
+				820251BC24B4318000ABEC08 /* WeatherResponse.swift in Sources */,
 				236B5C7E211FCDF600769D25 /* WeatherTableViewHeader.swift in Sources */,
 				820251B724B4110600ABEC08 /* WeatherRepoDecorator.swift in Sources */,
 				236B5C82211FE46100769D25 /* WeatherDetailViewController.swift in Sources */,
 				824718322442ADF8008462AC /* WeatherRouter.swift in Sources */,
-				236B5C85211FEE3900769D25 /* Weather.swift in Sources */,
 				820251B924B411AF00ABEC08 /* WeatherRepoCacheDecorator.swift in Sources */,
 				236B5C4B211FC66800769D25 /* AppDelegate.swift in Sources */,
 				82E0D25A244D9DA8007B63CA /* WeatherApi.swift in Sources */,
-				237A7E9121200AF80017D907 /* Temp.swift in Sources */,
-				237A7E9321200BCC0017D907 /* WeatherCondition.swift in Sources */,
 				237A7E99212025510017D907 /* DetailPageCell.swift in Sources */,
 				8247182E2442ADA2008462AC /* WeatherInteractor.swift in Sources */,
 				824718302442ADBF008462AC /* WeatherPresenter.swift in Sources */,
@@ -643,17 +524,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820251BE24B4363200ABEC08 /* WeatherWorkerTest.swift in Sources */,
 				239EA6FF2160589200A12A52 /* ViewControllerTests.swift in Sources */,
 				236B5C60211FC66900769D25 /* YAWA_DemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		236B5C62211FC66900769D25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				826B8B4A24B0607A0017B2D5 /* EarlGrey.swift in Sources */,
-				236B5C6B211FC66900769D25 /* YAWA_DemoUITests.swift in Sources */,
+				820251C024B43A2B00ABEC08 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,11 +538,6 @@
 			isa = PBXTargetDependency;
 			target = 236B5C46211FC66800769D25 /* YAWA-Demo */;
 			targetProxy = 236B5C5C211FC66900769D25 /* PBXContainerItemProxy */;
-		};
-		236B5C68211FC66900769D25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 236B5C46211FC66800769D25 /* YAWA-Demo */;
-			targetProxy = 236B5C67211FC66900769D25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -886,79 +755,6 @@
 			};
 			name = Release;
 		};
-		236B5C76211FC66900769D25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB27048B9EEACC140174C3BF /* Pods-YAWA-Tests-YAWA-DemoUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "YAWA-DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"EarlGreyTest\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"OHHTTPStubs\"",
-					"-framework",
-					"\"XCTest\"",
-					"-framework",
-					"\"eDistantObject\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.binkwang.YAWA-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "YAWA-DemoUITests/UITests-BridgingHeader.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "YAWA-Demo";
-			};
-			name = Debug;
-		};
-		236B5C77211FC66900769D25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9542AEE6E4E3DFFC6A23EF09 /* Pods-YAWA-Tests-YAWA-DemoUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "YAWA-DemoUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"EarlGreyTest\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"OHHTTPStubs\"",
-					"-framework",
-					"\"XCTest\"",
-					"-framework",
-					"\"eDistantObject\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.binkwang.YAWA-DemoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "YAWA-DemoUITests/UITests-BridgingHeader.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "YAWA-Demo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -985,15 +781,6 @@
 			buildConfigurations = (
 				236B5C73211FC66900769D25 /* Debug */,
 				236B5C74211FC66900769D25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		236B5C75211FC66900769D25 /* Build configuration list for PBXNativeTarget "YAWA-DemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				236B5C76211FC66900769D25 /* Debug */,
-				236B5C77211FC66900769D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

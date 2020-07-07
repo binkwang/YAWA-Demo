@@ -9,7 +9,7 @@
 import Foundation
 
 class WeatherWorker {
-    let weatherRepo: WeatherRepo
+    var weatherRepo: WeatherRepo
 
     init() {
         let cache = TheWeatherCache()

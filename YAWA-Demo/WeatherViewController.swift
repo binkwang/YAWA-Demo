@@ -25,6 +25,7 @@ class WeatherViewController: UIViewController {
     
     private func setup() {
         self.title = "WEATHER"
+        
         let viewController = self
         let interactor = WeatherInteractor()
         let presenter = WeatherPresenter()
