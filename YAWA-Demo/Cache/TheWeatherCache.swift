@@ -10,13 +10,12 @@ import Foundation
 
 class TheWeatherCache: WeatherCache {
     
-    private var weathers: [String: Data] = [:]
+    private var weathers: [String: WeatherResponse] = [:]
     
-    func getWeather(city: String) -> Data? {
+    func getWeather(city: String) -> WeatherResponse? {
         return weathers[city]
     }
-    
-    func storeWeather(city: String, weather: Data) {
+    func storeWeather(city: String, weather: WeatherResponse) {
         weathers[city] = weather
     }
 }

@@ -28,30 +28,34 @@ class WeatherWorkerTest: XCTestCase {
     // MARK: Test Doubles
     
     class WeatherCacheMock: WeatherCache {
-        
-        var mockData: Data? = nil
+        var mockData: WeatherResponse? = nil
         
         var getWeatherMethodCalled = false
         var storeWeatherMethodCalled = false
         
-        func getWeather(city: String) -> Data? {
+        func getWeather(city: String) -> WeatherResponse? {
             getWeatherMethodCalled = true
             return mockData
         }
         
-        func storeWeather(city: String, weather: Data) {
+        func storeWeather(city: String, weather: WeatherResponse) {
             storeWeatherMethodCalled = true
         }
     }
     
     class WeatherRepoMock: WeatherRepo {
-        
-        var mockData: Data? = nil
+        var mockData: WeatherResponse? = nil
         var fetchWeathersMethodCalled = false
         
-        func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        func fetchWeathers(cityName: String?,
+                           completion: @escaping (Result<WeatherResponse, Error>) -> Void) {
             fetchWeathersMethodCalled = true
-            completion(mockData, nil, nil)
+            
+            guard let mockData = mockData else {
+                XCTFail("mock data should not be nil")
+                return
+            }
+            completion(.success(mockData))
         }
     }
     
@@ -62,7 +66,7 @@ class WeatherWorkerTest: XCTestCase {
         // Given
         
         let weatherCache = WeatherCacheMock()
-        weatherCache.mockData = getData(from: "weather")
+        weatherCache.mockData = getObject()
         let web = WeatherRepoMock()
         let weatherRepo = WeatherRepoCacheDecorator(inner: web, cache: weatherCache)
         
@@ -103,7 +107,7 @@ class WeatherWorkerTest: XCTestCase {
         
         let weatherCache = WeatherCacheMock()
         let web = WeatherRepoMock()
-        web.mockData = getData(from: "weather")
+        web.mockData = getObject()
         let weatherRepo = WeatherRepoCacheDecorator(inner: web, cache: weatherCache)
         
         sut.weatherRepo = weatherRepo
@@ -140,6 +144,20 @@ class WeatherWorkerTest: XCTestCase {
 }
 
 extension XCTestCase {
+    
+    func getObject() -> WeatherResponse? {
+        let jsonDecoder = JSONDecoder()
+        
+        guard let data = getData(from: "weather") else {
+            return nil
+        }
+        
+        guard let object = try? jsonDecoder.decode(WeatherResponse.self, from: data) else {
+            return nil
+        }
+        
+        return object
+    }
     
     func getData(from jsonFile: String) -> Data? {
         guard let data = try? Bundle(for: type(of: self)).getJSONData(from: jsonFile) else {

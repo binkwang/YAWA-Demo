@@ -23,24 +23,13 @@ class WeatherWorker {
                        success: @escaping (_ response: Weather.LoadWeatherList.Response) -> Void,
                        failure: @escaping (_ errMessage: String) -> Void) {
         
-        requestStart()
-        
-        weatherRepo.fetchWeathers(cityName: cityName) { (data, _, error) in
+        weatherRepo.fetchWeathers(cityName: cityName) { (result) in
             requestEnd()
             
-            if let data = data {
-                DispatchQueue.global(qos: .utility).async {
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let weatherResponse = try jsonDecoder.decode(WeatherResponse.self, from: data)
-                        
-                        success(Weather.LoadWeatherList.Response(weather: weatherResponse))
-                    } catch let error {
-                        failure(error.localizedDescription)
-                    }
-                }
-            } else if let error = error {
+            switch result {
+            case .success(let weatherResponse):
+                success(Weather.LoadWeatherList.Response(weather: weatherResponse))
+            case .failure(let error):
                 failure(error.localizedDescription)
             }
         }

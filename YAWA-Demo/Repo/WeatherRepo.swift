@@ -9,5 +9,6 @@
 import Foundation
 
 protocol WeatherRepo {
-    func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func fetchWeathers(cityName: String?,
+                       completion: @escaping (Result<WeatherResponse, Error>) -> Void)
 }

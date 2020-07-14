@@ -13,7 +13,9 @@ protocol WeatherRepoDecorator: WeatherRepo {
 }
 
 extension WeatherRepoDecorator {
-    func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        inner.fetchWeathers(cityName: cityName, completion: completion)
+    func fetchWeathers(cityName: String?,
+                       completion: @escaping (Result<WeatherResponse, Error>) -> Void) {
+        inner.fetchWeathers(cityName: cityName,
+                            completion: completion)
     }
 }

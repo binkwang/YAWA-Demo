@@ -17,20 +17,25 @@ class WeatherRepoCacheDecorator: WeatherRepoDecorator {
         self.cache = cache
     }
     
-    func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        guard let cityName = cityName else { return }
+    func fetchWeathers(cityName: String?,
+                       completion: @escaping (Result<WeatherResponse, Error>) -> Void) {
         
-        guard let data = cache.getWeather(city: cityName) else {
+        guard let cityName = cityName else { return }
+        guard let weatherResposne = cache.getWeather(city: cityName) else {
             
-            return inner.fetchWeathers(cityName: cityName) { [weak self] (data, response, error) in
+            return inner.fetchWeathers(cityName: cityName) { [weak self] (result) in
+                guard let self = self else { return }
                 
-                if let self = self, let data = data {
-                    self.cache.storeWeather(city: cityName, weather: data)
+                switch result {
+                case .success(let weatherResposne):
+                    self.cache.storeWeather(city: cityName, weather: weatherResposne)
+                case .failure:
+                    print("")
                 }
                 
-                completion(data, response, error)
+                completion(result)
             }
         }
-        completion(data, nil, nil)
+        completion(.success(weatherResposne))
     }
 }

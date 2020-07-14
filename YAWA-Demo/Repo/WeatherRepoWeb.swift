@@ -8,25 +8,22 @@
 
 import Foundation
 
-class WebWeatherRepo: WeatherRepo {
+class WebWeatherRepo: ApiService, WeatherRepo {
+    override init() { super.init() }
     
-    init() {}
-    
-    func fetchWeathers(cityName: String?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    func fetchWeathers(cityName: String?,
+                       completion: @escaping (Result<WeatherResponse, Error>) -> Void) {
         
         guard let cityName = cityName else { return }
         
         do {
             let request = try WeatherApi.getWeather(city: cityName).request()
-            let session = URLSession(configuration: URLSessionConfiguration.default)
             
-            session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-                completion(data, response, error)
-            }).resume()
-            
+            callApi(request: request, modelType: WeatherResponse.self) { (result) in
+                completion(result)
+            }
         } catch {
-            completion(nil, nil, error)
+            completion(.failure(error))
         }
     }
-    
 }

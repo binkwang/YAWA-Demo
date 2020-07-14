@@ -9,6 +9,6 @@
 import Foundation
 
 protocol WeatherCache {
-    func getWeather(city: String) -> Data?
-    func storeWeather(city: String, weather: Data)
+    func getWeather(city: String) -> WeatherResponse?
+    func storeWeather(city: String, weather: WeatherResponse)
 }
