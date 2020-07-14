@@ -18,5 +18,6 @@ protocol ApiServiceProtocol {
 enum ApiError: Error {
     case unknown
     case nilResponse
+    case invalidResponse
     case decodeFailed
 }

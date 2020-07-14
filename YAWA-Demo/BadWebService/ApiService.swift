@@ -24,6 +24,12 @@ class ApiService: ApiServiceProtocol {
                 return
             }
             
+            guard let response = response as? HTTPURLResponse,
+                response.isValidResponse else {
+                completion(.failure(ApiError.invalidResponse))
+                return
+            }
+            
             do {
                 let object = try ApiUtils.object(from: data, type: modelType.self)
                 completion(.success(object))
@@ -31,6 +37,13 @@ class ApiService: ApiServiceProtocol {
                 completion(.failure(error))
             }
         }).resume()
-        
+    }
+}
+
+fileprivate extension HTTPURLResponse {
+    static let successResponseCodeRange = 200..<299
+    
+    var isValidResponse: Bool {
+        return HTTPURLResponse.successResponseCodeRange ~= statusCode
     }
 }
